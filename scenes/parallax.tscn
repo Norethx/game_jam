@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckq7dxe0da1p7"]
+
+[ext_resource type="Texture2D" uid="uid://ck20co1vfp6bn" path="res://assets/backgrounds/Background_0.png" id="1_quimm"]
+[ext_resource type="Texture2D" uid="uid://bwjysjxep16uc" path="res://assets/backgrounds/parallax-02.png" id="2_yvlf7"]
+[ext_resource type="Texture2D" uid="uid://dk6qrm41bv48v" path="res://assets/backgrounds/parallax-03.png" id="3_hankl"]
+[ext_resource type="Texture2D" uid="uid://pxct4rrshq7o" path="res://assets/backgrounds/parallax-04.png" id="4_356xm"]
+[ext_resource type="PackedScene" uid="uid://bbvbe3ten3p64" path="res://scenes/PlayerKnight.tscn" id="5_cyp6n"]
+
+[node name="Parallax" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+position = Vector2(1, 2)
+texture = ExtResource("1_quimm")
+centered = false
+
+[node name="Moutains" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Moutains"]
+position = Vector2(1, 61)
+texture = ExtResource("2_yvlf7")
+centered = false
+
+[node name="bgTrees" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/bgTrees"]
+position = Vector2(1, 46)
+texture = ExtResource("3_hankl")
+centered = false
+
+[node name="nearTree" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTree"]
+texture = ExtResource("4_356xm")
+centered = false
+
+[node name="PlayerKnight" parent="." instance=ExtResource("5_cyp6n")]
+position = Vector2(256, 374)
