@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1758310846
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758299299::1758299356::1::::<><><>0<>0<>88157b931c7704b281135964cf323fb0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1758310846
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758299299::1758299356::1::::<><><>0<>0<>48a58244e995cebcc8fdae2ad9463e6a<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+::res://assets/future/::1758310858
+players blue x1.png::CompressedTexture2D::3866569301946938109::1758310858::1758310858::1::::<><><>0<>0<>b098606f42c55ceb7d5aa84861fb7c35<>res://.godot/imported/players blue x1.png-f254e63de687544344ff2671252df619.ctex::
+tileset x1.png::CompressedTexture2D::6268302973856655408::1758310792::1758310846::1::::<><><>0<>0<>2f5b2d75615b6613b2858becd26c8e08<>res://.godot/imported/tileset x1.png-dbbd2c814aedeef5a60072efd87bff27.ctex::
+::res://globals/::1758299299
+game_start.gd::GDScript/GDScript::5614657312367808239::1758299299::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/::1758299299
+main.tscn::PackedScene/PackedScene::6432021185016298908::1758299299::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
+::res://scripts/::1758299299
+main.gd::GDScript/GDScript::822789067647827553::1758299299::0::1::::<>Node<><>0<>0<><>::
