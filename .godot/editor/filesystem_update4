@@ -1,1 +1,3 @@
-res://scenes/Fmap.001.tscn
+res://scenes/level.tscn
+res://scenes/PlayerKnight.tscn
+res://scenes/main.tscn
