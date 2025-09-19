@@ -12,4 +12,18 @@ config_version=5
 
 config/name="game_jam"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
+
+[autoload]
+
+GameStart="*res://globals/game_start.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="viewport"
+
+[rendering]
+
+anti_aliasing/quality/msaa_2d=2
