@@ -1,6 +1,3 @@
-pull_main:
-	@git pull --no-rebase --no-edit -X theirs origin main
-
 pull_past:
 	@git pull --no-rebase --no-edit -X theirs origin past
 
