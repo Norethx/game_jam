@@ -1,0 +1,8 @@
+CanvasModulate
+AnimationTree
+AnimationPlayer
+Sprite2D
+PointLight2D
+CollisionShape2D
+CharacterBody2D
+TileMapLayer

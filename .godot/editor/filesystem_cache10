@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1758313330
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758309863::1758309904::1::::<><><>0<>0<>88157b931c7704b281135964cf323fb0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+enemy.001.tscn::PackedScene::684158148631081541::1758314751::0::1::::<><><>0<>0<><>::uid://c7py4qbg6i344::::res://assets/future/chicken_run_right-Sheet.png
+::res://assets/::1758313253
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758309863::1758309904::1::::<><><>0<>0<>48a58244e995cebcc8fdae2ad9463e6a<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+::res://assets/future/::1758314274
+chicken_run_left-Sheet.png::CompressedTexture2D::2227201862228589804::1758314274::1758314274::1::::<><><>0<>0<>808b35f4d496b2e610b68eac9e97aa02<>res://.godot/imported/chicken_run_left-Sheet.png-8f8c86a51c8a951d7303390407dac55f.ctex::
+chicken_run_right-Sheet.png::CompressedTexture2D::7051359868196565655::1758314274::1758314274::1::::<><><>0<>0<>b62b5c35102275cf866c6d010655e671<>res://.godot/imported/chicken_run_right-Sheet.png-23ad468f513f176275d82bdfbd5f5bd7.ctex::
+players blue x1.png::CompressedTexture2D::3866569301946938109::1758313253::1758313331::1::::<><><>0<>0<>b098606f42c55ceb7d5aa84861fb7c35<>res://.godot/imported/players blue x1.png-f254e63de687544344ff2671252df619.ctex::
+tileset x1.png::CompressedTexture2D::6268302973856655408::1758313253::1758313331::1::::<><><>0<>0<>2f5b2d75615b6613b2858becd26c8e08<>res://.godot/imported/tileset x1.png-dbbd2c814aedeef5a60072efd87bff27.ctex::
+::res://globals/::1758309863
+game_start.gd::GDScript/GDScript::5614657312367808239::1758309863::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/::1758314047
+Fmap.001.tscn::PackedScene::5988439313283010790::1758313253::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png
+main.tscn::PackedScene/PackedScene::6432021185016298908::1758309863::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
+::res://scenes/Fenemys/::1758314047
+::res://scripts/::1758309863
+main.gd::GDScript/GDScript::822789067647827553::1758309863::0::1::::<>Node<><>0<>0<><>::
