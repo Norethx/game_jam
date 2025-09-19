@@ -1,4 +1,10 @@
 Sprite2D
+AnimationPlayer
+AnimationTree
+TileMapLayer
+Node
+TileMap
+Node2D
 ParallaxLayer
 ParallaxBackground
 Node2D
@@ -10,5 +16,3 @@ StaticBody2D
 TextureRect
 CanvasLayer
 Camera2D
-AnimatedSprite2D
-CharacterBody2D

@@ -1,3 +1,4 @@
 res://scenes/PlayerKnight.tscn
 res://scenes/level.tscn
 res://scenes/parallax.tscn
+res://scenes/player_knight.gd
