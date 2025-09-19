@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1758299264
+icon.svg::CompressedTexture2D::2633833542494581561::1758299230::1758299265::1::::<><><>0<>0<>88157b931c7704b281135964cf323fb0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1758299230
+icon.svg::CompressedTexture2D::2633833542494581561::1758299230::1758299265::1::::<><><>0<>0<>48a58244e995cebcc8fdae2ad9463e6a<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+::res://globals/::1758299230
+game_start.gd::GDScript::5614657312367808239::1758299230::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/::1758299230
+main.tscn::PackedScene::6432021185016298908::1758299230::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
+::res://scripts/::1758299230
+main.gd::GDScript::822789067647827553::1758299230::0::1::::<>Node<><>0<>0<><>::
