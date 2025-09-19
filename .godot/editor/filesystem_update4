@@ -1,4 +1,5 @@
-res://scenes/PlayerKnight.tscn
 res://scenes/level.tscn
-res://scenes/parallax.tscn
+res://scenes/PlayerKnight.tscn
+res://scenes/main.tscn
 res://scenes/player_knight.gd
+res://scenes/parallax.tscn
