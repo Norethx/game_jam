@@ -8,4 +8,4 @@ past:
 	@git push origin past
 
 future:
-	@git push origin past
+	@git push origin future
