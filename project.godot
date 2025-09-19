@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="game_jam"
+run/main_scene="uid://ckq7dxe0da1p7"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://assets/icon.svg"
 
 [autoload]
 
@@ -22,7 +22,7 @@ GameStart="*res://globals/game_start.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [layer_names]
 

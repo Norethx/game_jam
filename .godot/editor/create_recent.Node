@@ -8,6 +8,10 @@ TileMap
 Node2D
 ParallaxLayer
 ParallaxBackground
+Node2D
+Node
+TileMapLayer
+TileMap
 CollisionShape2D
 StaticBody2D
 TextureRect
