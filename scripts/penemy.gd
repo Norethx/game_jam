@@ -21,4 +21,4 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		print("O inimigo atingiu o player!")
-		body.take_damage(10) # exemplo: chamar método do player
+		body.take_health_damge(10) # exemplo: chamar método do player

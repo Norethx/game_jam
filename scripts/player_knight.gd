@@ -9,8 +9,8 @@ const JUMP_VELOCITY = -400.0
 @onready var hitbox: CollisionShape2D = $CollisionShape2D
 
 # HITBOXES DA ESPADA
-@onready var attack_still_hitbox: CollisionShape2D = $Area2D/AttackStillHitbox
-@onready var attack_moving_hitbox: CollisionShape2D = $Area2D/AttackMovingHitbox
+@onready var attack_still_hitbox: CollisionShape2D = $StrikeArea/AttackStillHitbox
+@onready var attack_moving_hitbox: CollisionShape2D = $StrikeArea/AttackMovingHitbox
 
 var is_attacking = false
 var is_dashing = false
@@ -29,16 +29,17 @@ var stamina: float = 100
 
 
 func _ready() -> void:
+	add_to_group("player")
 	floor_max_angle = 45.0
 	floor_snap_length = 2.0
 
 
 func _physics_process(delta: float) -> void:
 	init_gravity(delta)
-	
+
 	################################ INPUT #####################################
 	var direction = Input.get_axis("move_left", "move_right")
-	
+
 	init_animations()
 	init_hitbox(direction)
 	init_movement(direction)
@@ -180,12 +181,12 @@ func take_health_damge(amount: float):
 		if damage > health:
 			health = 0
 			die()
-			return 
+			return
 		health -= damage
 
 func take_armor_damge(amount: float) -> float:
 	var damage: float = 0
-	
+
 	if amount <= 0:
 		return 0
 	if not is_armor_enabled:
@@ -196,9 +197,10 @@ func take_armor_damge(amount: float) -> float:
 		return damage
 	armor -= amount
 	return 0;
-	
+
 func die():
 	if is_death_enabled:
 		is_dead = true
 	else:
 		is_uncouncious = true
+	print("E MORREU")
