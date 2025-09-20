@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal attacked_enemy(enemy: Area2D)
 signal upate_health(amount: float)
 signal upate_armor(amount: float)
 signal update_stamina(amount: float)
@@ -12,6 +13,7 @@ const JUMP_VELOCITY = -400.0
 @onready var hitbox: CollisionShape2D = $CollisionShape2D
 
 # HITBOXES DA ESPADA
+@onready var strike_area: Area2D = $StrikeArea
 @onready var attack_still_hitbox: CollisionShape2D = $StrikeArea/AttackStillHitbox
 @onready var attack_moving_hitbox: CollisionShape2D = $StrikeArea/AttackMovingHitbox
 
@@ -269,3 +271,8 @@ func colldown_stamina():
 func get_ms():
 	var time: int = Time.get_ticks_msec()
 	return time
+
+
+func _on_penemy_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		take_health_damge(10);

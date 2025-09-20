@@ -1,9 +1,7 @@
-res://scenes/level.tscn
-res://scenes/PlayerKnight.tscn
-res://scripts/player_knight.gd
 res://scenes/Penemys/penemy.tscn
+res://scripts/penemies.gd
+res://scenes/PlayerKnight.tscn
+res://scenes/level.tscn
 res://scripts/penemy.gd
-res://scenes/hud.tscn
-res://scripts/hud.gd
-res://scenes/parallax.tscn
-res://scenes/platform.tscn
+res://scripts/player_knight.gd
+res://scenes/golem_2d.tscn

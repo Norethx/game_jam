@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://0tufw43fmgxv" path="res://assets/sprites/Golem Reinforced/Golem_Armor_AttackA_FX.png" id="2_auuy6"]
 [ext_resource type="Texture2D" uid="uid://fs0ar10hu24o" path="res://assets/sprites/Golem Reinforced/Golem_Armor_Run.png" id="2_kljf8"]
 [ext_resource type="Texture2D" uid="uid://dvko0d7g283lj" path="res://assets/sprites/Golem Reinforced/Golem_Armor_ArmorBreak.png" id="3_glmr0"]
-[ext_resource type="Script" uid="uid://dioexyhjmynua" path="res://scripts/golem_2d.gd" id="6_auuy6"]
+[ext_resource type="Script" path="res://scripts/golem_2d.gd" id="6_auuy6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6a3qw"]
 atlas = ExtResource("1_dgy02")
@@ -298,6 +298,8 @@ scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_6a3qw")
 animation = &"spikes"
 autoplay = "idle"
+frame = 8
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
