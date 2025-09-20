@@ -15,11 +15,17 @@ const JUMP_VELOCITY = -400.0
 var is_attacking = false
 var is_dashing = false
 var is_damage_enabled = false
+var is_armor_enabled = false
+var is_death_enabled = false
+var is_dead = false
+var is_uncouncious = false
 
 # STATUS
-var health = 100
-var damage = 100
-var stamina = 100
+var health: float = 100
+var armor: float = 0
+var slash_damage: float = 100
+var blunt_damage: float = 20
+var stamina: float = 100
 
 
 func _ready() -> void:
@@ -38,7 +44,7 @@ func _physics_process(delta: float) -> void:
 	init_movement(direction)
 	if Input.is_action_just_pressed("attack1"): attack1_handler(direction)
 	if Input.is_action_just_pressed("jump"): jump_handler()
-	if Input.is_action_just_pressed("dash"): dash_handler(direction)
+	if Input.is_action_just_pressed("dash"): dash_handler()
 
 	move_and_slide()
 
@@ -146,7 +152,7 @@ func attack1_still():
 # =================== DASH ===================
 # ============================================
 
-func dash_handler(direction: float):
+func dash_handler():
 	is_dashing = true
 	sprite.play("dash")
 	if sprite.flip_h:
@@ -159,3 +165,40 @@ func dash_handler(direction: float):
 	is_attacking = false
 	attack_still_hitbox.disabled = true
 	attack_moving_hitbox.disabled = true
+
+# --------------------------------------------------------------------------------------------
+# ------------------------------------------ COMBAT ------------------------------------------
+# --------------------------------------------------------------------------------------------
+
+# ==============================================
+# =================== DAMAGE ===================
+# ==============================================
+
+func take_health_damge(amount: float):
+	var damage: float = take_armor_damge(amount)
+	if damage:
+		if damage > health:
+			health = 0
+			die()
+			return 
+		health -= damage
+
+func take_armor_damge(amount: float) -> float:
+	var damage: float = 0
+	
+	if amount <= 0:
+		return 0
+	if not is_armor_enabled:
+		return amount
+	if amount > armor:
+		damage = amount - armor
+		armor = 0
+		return damage
+	armor -= amount
+	return 0;
+	
+func die():
+	if is_death_enabled:
+		is_dead = true
+	else:
+		is_uncouncious = true
