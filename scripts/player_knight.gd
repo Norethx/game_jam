@@ -54,6 +54,7 @@ func _physics_process(delta: float) -> void:
 	################################ INPUT #####################################
 	var direction = Input.get_axis("move_left", "move_right")
 
+
 	init_animations()
 	init_hitbox(direction)
 	init_movement(direction)

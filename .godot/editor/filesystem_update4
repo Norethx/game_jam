@@ -1,8 +1,7 @@
-res://scenes/Fmap.001.tscn
 res://scenes/level.tscn
 res://scenes/PlayerKnight.tscn
 res://scripts/player_knight.gd
+res://scenes/Penemys/penemy.tscn
 res://scripts/penemy.gd
 res://scenes/hud.tscn
-res://scenes/canvas_layer.gd
 res://scripts/hud.gd

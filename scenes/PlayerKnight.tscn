@@ -354,4 +354,4 @@ shape = SubResource("RectangleShape2D_xcgjw")
 disabled = true
 debug_color = Color(1, 0, 0, 0.419608)
 
-[connection signal="upate_armor" from="." to="." method="_on_upate_armor"]
+[node name="RayCasts" type="Node" parent="."]
