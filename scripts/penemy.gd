@@ -1,24 +1,34 @@
 extends Area2D
 
-@export var speed: float = 60.0
-@export var target: Node2D
+@export var speed: float = 80.0
+@onready var ray_chao: RayCast2D = $RayCast2DChao
+@onready var ray_borda: RayCast2D = $RayCast2DBorda
+@onready var start_position: Vector2 = global_position
+@onready var sprite: Sprite2D = $Sprite2D
 
+var velocity = Vector2.ZERO
+var direction: int = -1
 
 func _process(delta: float) -> void:
-	if not target: return # segurança
+	if not ray_borda.is_colliding():
+		direction *= -1
+		sprite.flip_h = true
+		if direction > 0:
+			ray_borda.position.x = 15.0
+		else:
+			ray_borda.position.x = -15.0
 
-	var direction = ((target.global_position + Vector2.UP * 20) - global_position).normalized()
-	var distance = global_position.distance_to(target.global_position)
+	var gravity = 500.0
+	# CALCULA O MOVIMENTO HORIZONTAL
+	velocity.x = direction * speed
 
-	if distance < 200.0:
-		global_position += direction * speed * delta
+	# GRAVIDADE (MOVIMENTO VERTICAL)
+	if ray_chao.is_colliding():
+		var ground_pos = ray_chao.get_collision_point()
+		global_position.y = ground_pos.y - 16
+		velocity.y = 0
+	else:
+		velocity.y += gravity * delta
 
-
-	global_position += direction * speed * delta
-	$Sprite2D.flip_h = direction.x < 0
-
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		print("O inimigo atingiu o player!")
-		body.take_health_damge(10) # exemplo: chamar método do player
+	# APLICA MOVIMENTO
+	global_position += velocity * delta

@@ -46,6 +46,6 @@ position = Vector2(177, 345)
 
 [node name="Penemies" type="Node" parent="."]
 
-[node name="Penemy" parent="Penemies" node_paths=PackedStringArray("target") instance=ExtResource("4_mx8sn")]
-position = Vector2(373, 254)
-target = NodePath("../../PlayerKnight")
+[node name="Penemy" parent="Penemies" instance=ExtResource("4_mx8sn")]
+position = Vector2(357, 326)
+speed = 80.0

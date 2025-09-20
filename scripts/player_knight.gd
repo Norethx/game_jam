@@ -237,7 +237,7 @@ func use_stamina(amount: float) -> bool:
 	stamina_last_use_time = get_ms()
 	print("Stamina:", stamina)
 	return true
-	
+
 func colldown_stamina():
 	if get_ms() - stamina_last_use_time < 1.5 * 1000:
 		return
