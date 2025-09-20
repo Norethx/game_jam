@@ -227,19 +227,15 @@ func take_armor_damge(amount: float) -> float:
 func die():
 	if is_death_enabled:
 		is_dead = true
-		print("You are Dead")
 	else:
 		is_uncouncious = true
-		print("You are Uncouncious")
 
 # ===============================================
 # =================== STAMINA ===================
 # ===============================================
 
 func use_stamina(amount: float) -> bool:
-	print("amount:", amount)
 	if amount > stamina:
-		print("Stamina: not enougth!")
 		return false
 	stamina -= amount
 	update_stamina.emit(stamina)
@@ -259,7 +255,6 @@ func colldown_stamina():
 		else:
 			stamina += 2
 			update_stamina.emit(stamina)
-		print("stamina regen:", stamina)
 		stamina_last_cooldown_tick = get_ms()
 
 # ===============================================

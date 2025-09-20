@@ -788,7 +788,6 @@ position = Vector2(2399, 280)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
 position = Vector2(-2.05688, 5.92023)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t1rx8")
 one_way_collision = true
 
@@ -797,7 +796,6 @@ position = Vector2(2648, 279)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform4"]
 position = Vector2(-2.05688, 5.92023)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t1rx8")
 one_way_collision = true
 
@@ -824,7 +822,6 @@ position = Vector2(2506, 207)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform3"]
 position = Vector2(0, 4.30561)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_olg7q")
 one_way_collision = true
 
