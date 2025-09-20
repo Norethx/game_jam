@@ -36,9 +36,11 @@ texture = ExtResource("3_hankl")
 centered = false
 
 [node name="nearTree" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.1, 0.1)
+motion_scale = Vector2(1.5, 1)
 motion_mirroring = Vector2(1440, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/nearTree"]
+z_index = 2
+position = Vector2(0, 2)
 texture = ExtResource("4_356xm")
 centered = false

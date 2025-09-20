@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 		if not is_attacking: # idem
 			if velocity.x == 0:
-				sprite.play("idle")
+				sprite.play("iddle")
 			else:
 				sprite.play("run")
 
