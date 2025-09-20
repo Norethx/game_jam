@@ -340,15 +340,15 @@ shape = SubResource("CapsuleShape2D_8h3x3")
 position = Vector2(0, -82)
 zoom = Vector2(2.5, 2.5)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StrikeArea" type="Area2D" parent="."]
 
-[node name="AttackStillHitbox" type="CollisionShape2D" parent="Area2D"]
+[node name="AttackStillHitbox" type="CollisionShape2D" parent="StrikeArea"]
 position = Vector2(19, -19)
 shape = SubResource("RectangleShape2D_xcgjw")
 disabled = true
 debug_color = Color(1, 0, 0, 0.419608)
 
-[node name="AttackMovingHitbox" type="CollisionShape2D" parent="Area2D"]
+[node name="AttackMovingHitbox" type="CollisionShape2D" parent="StrikeArea"]
 position = Vector2(40, -19)
 shape = SubResource("RectangleShape2D_xcgjw")
 disabled = true

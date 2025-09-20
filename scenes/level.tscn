@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://d22ricinbil1t"]
+[gd_scene load_steps=8 format=4 uid="uid://d22ricinbil1t"]
 
 [ext_resource type="Texture2D" uid="uid://bbndbo13yq7fr" path="res://assets/tilemaps/Tiles.png" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://254typx87wf3" path="res://scenes/parallax.tscn" id="3_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://dlcxoq3qojvl8" path="res://scenes/PlayerKnight.tscn" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://ncdt7lahrqi2" path="res://scenes/Penemys/penemy.tscn" id="4_mx8sn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7c3h"]
 distance = -589.0
@@ -42,3 +43,9 @@ tile_set = SubResource("TileSet_w8frs")
 
 [node name="PlayerKnight" parent="." instance=ExtResource("3_w8frs")]
 position = Vector2(177, 345)
+
+[node name="Penemies" type="Node" parent="."]
+
+[node name="Penemy" parent="Penemies" node_paths=PackedStringArray("target") instance=ExtResource("4_mx8sn")]
+position = Vector2(373, 254)
+target = NodePath("../../PlayerKnight")

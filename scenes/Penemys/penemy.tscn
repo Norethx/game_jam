@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ncdt7lahrqi2"]
+
+[ext_resource type="Script" uid="uid://cd6x4uul3mtdk" path="res://scripts/penemy.gd" id="1_loi3y"]
+[ext_resource type="Texture2D" uid="uid://qvhe5p52ho42" path="res://icon.svg" id="1_x3scd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_loi3y"]
+radius = 15.0
+
+[node name="Penemy" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+gravity_space_override = 1
+script = ExtResource("1_loi3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_x3scd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_loi3y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
