@@ -1,6 +1,10 @@
+RayCast2D
+CollisionPolygon2D
+Polygon2D
+CollisionShape2D
+Area2D
 AnimationTree
 AnimationPlayer
-CollisionShape2D
 Sprite2D
 CharacterBody2D
 TileMapLayer
@@ -8,9 +12,3 @@ ParallaxLayer
 ParallaxBackground
 StaticBody2D
 TileMap
-TextureRect
-CanvasLayer
-Node
-Camera2D
-CollisionShape2D
-AnimatedSprite2D
