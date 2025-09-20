@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://by2ovjg1g5ju2"]
+
+[node name="Platform" type="StaticBody2D"]
+scale = Vector2(0.972293, 0.929018)
+collision_mask = 6
