@@ -12,4 +12,5 @@ TextureRect
 CanvasLayer
 Node
 Camera2D
+CollisionShape2D
 AnimatedSprite2D

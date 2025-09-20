@@ -1,20 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://d22ricinbil1t"]
+[gd_scene load_steps=7 format=4 uid="uid://d22ricinbil1t"]
 
-[ext_resource type="PackedScene" uid="uid://bbvbe3ten3p64" path="res://scenes/PlayerKnight.tscn" id="3_w8frs"]
-[ext_resource type="Script" uid="uid://dgjeycgdfvi2g" path="res://scripts/player_knight.gd" id="4_mx8sn"]
+[ext_resource type="Texture2D" uid="uid://bbndbo13yq7fr" path="res://assets/tilemaps/Tiles.png" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://254typx87wf3" path="res://scenes/parallax.tscn" id="3_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://dlcxoq3qojvl8" path="res://scenes/PlayerKnight.tscn" id="3_w8frs"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7c3h"]
 distance = -589.0
 
-[node name="Level" type="Node2D"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
+texture = ExtResource("2_w7c3h")
+10:9/size_in_atlas = Vector2i(10, 5)
+10:9/0 = 0
+10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-80, 8, -20, -20, 16, -20, 80, 8, 80, 40, -80, 40)
+8:1/size_in_atlas = Vector2i(6, 3)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -8, 48, -8, 48, 24, -48, 24)
 
-[node name="PlayerKnight" parent="." instance=ExtResource("3_w8frs")]
-position = Vector2(522, 358)
-script = ExtResource("4_mx8sn")
+[sub_resource type="TileSet" id="TileSet_w8frs"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 6
+sources/0 = SubResource("TileSetAtlasSource_w7c3h")
+
+[node name="Level" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(1, -200)
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 530)
 shape = SubResource("WorldBoundaryShape2D_w7c3h")
+
+[node name="Tiles" type="Node" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="Tiles"]
+z_index = -1
+tile_map_data = PackedByteArray("AAAOABgAAAAIAAEAAAAIABgAAAAIAAEAAAACABgAAAAIAAEAAAAeABgAAAAIAAEAAAAkABgAAAAIAAEAAAAWABcAAAAKAAkAAAA=")
+tile_set = SubResource("TileSet_w8frs")
+
+[node name="Parallax" parent="." instance=ExtResource("3_mx8sn")]
+
+[node name="PlayerKnight" parent="." instance=ExtResource("3_w8frs")]
+position = Vector2(177, 345)
