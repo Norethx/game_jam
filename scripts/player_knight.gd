@@ -135,6 +135,7 @@ const JUMP_VELOCITY = -400.0
 @onready var attack_moving_hitbox: CollisionShape2D = $Area2D/AttackMovingHitbox
 
 var is_attacking = false
+var is_dashing = false
 
 
 func _ready() -> void:
@@ -148,6 +149,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("attack1"): attack(direction)
 	if Input.is_action_just_pressed("jump"): jump()
+	if Input.is_action_just_pressed("dash"): dash(direction)
 	move(direction)
 
 	############################## CÁLCULO #####################################
@@ -163,7 +165,7 @@ func _physics_process(delta: float) -> void:
 
 
 func move(direction):
-	if direction:
+	if direction and not is_dashing:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -202,9 +204,23 @@ func attack_still():
 	await sprite.animation_finished
 	attack_still_hitbox.disabled = true
 	is_attacking = false
+	
+func dash(direction: float):
+	is_dashing = true
+	sprite.play("dash")
+	if sprite.flip_h:
+		velocity.x -= 1300
+	else:
+		velocity.x += 1300
+	await get_tree().create_timer(0.1).timeout
+	velocity.x = move_toward(velocity.x, 0, SPEED)
+	is_dashing = false
+	is_attacking = false
+	attack_still_hitbox.disabled = true
+	attack_moving_hitbox.disabled = true
 
 func play_animation(direction):
-	if not is_attacking:
+	if not is_attacking and not is_dashing:
 		if not is_on_floor():
 			if velocity.y < 0:
 				sprite.play("jump")
