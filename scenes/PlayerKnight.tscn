@@ -313,14 +313,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfnm5"]
-size = Vector2(13, 27)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8h3x3"]
+radius = 6.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcgjw"]
 size = Vector2(37.25, 38)
 
 [node name="PlayerKnight" type="CharacterBody2D"]
-scale = Vector2(1.5, 1.5)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_wauxr")
@@ -334,14 +333,12 @@ frame = 3
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4.5, -14.5)
-shape = SubResource("RectangleShape2D_rfnm5")
+position = Vector2(-5, -15)
+shape = SubResource("CapsuleShape2D_8h3x3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-26.6667, -81.3333)
-zoom = Vector2(2, 2)
-limit_left = -1
-limit_right = 2860
+position = Vector2(0, -82)
+zoom = Vector2(2.5, 2.5)
 
 [node name="StrikeArea" type="Area2D" parent="."]
 
@@ -356,3 +353,5 @@ position = Vector2(40, -19)
 shape = SubResource("RectangleShape2D_xcgjw")
 disabled = true
 debug_color = Color(1, 0, 0, 0.419608)
+
+[connection signal="upate_armor" from="." to="." method="_on_upate_armor"]
