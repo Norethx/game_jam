@@ -15,15 +15,14 @@ func _ready() -> void:
 	floor_snap_length = 2.0
 
 
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("attack1"):
-		await attack()
-
 
 func _physics_process(delta: float) -> void:
 	################################ INPUT ######################################
 	if Input.is_action_just_pressed("attack1") and not is_attacking:
-		attack()
+		if velocity.x != 0:
+			attack_moving()
+		else:
+			attack_still()
 		return # evita que o resto da lógica rode nesse frame
 
 	############################## CÁLCULO #####################################
@@ -46,7 +45,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 		if not is_attacking: # idem
 			if velocity.x == 0:
-				sprite.play("iddle")
+				sprite.play("idle")
 			else:
 				sprite.play("run")
 
@@ -62,8 +61,14 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func attack():
+func attack_moving():
 	is_attacking = true
-	sprite.play("attack1")
+	sprite.play("attack_moving")
+	await sprite.animation_finished
+	is_attacking = false
+
+func attack_still():
+	is_attacking = true
+	sprite.play("attack_still")
 	await sprite.animation_finished
 	is_attacking = false
