@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+[gd_scene load_steps=4 format=4 uid="uid://crk3yq8g0h7xq"]
+=======
 [gd_scene load_steps=11 format=4 uid="uid://crk3yq8g0h7xq"]
+>>>>>>> future
 
 [ext_resource type="Script" uid="uid://b5vlknus2go5e" path="res://scenes/fmap.001.gd" id="1_73ic1"]
 [ext_resource type="Texture2D" uid="uid://cvkobfq8efg13" path="res://assets/future/tileset x1.png" id="1_s00kv"]
+<<<<<<< HEAD
+=======
 [ext_resource type="PackedScene" path="res://PlayerAstronaut.tscn" id="2_752p2"]
 [ext_resource type="Texture2D" uid="uid://b22gvfgwy61t" path="res://assets/future/CosmicLegacy_PetricakeGamesPNG.png" id="2_c5rmr"]
 [ext_resource type="PackedScene" uid="uid://bn2jm556alxf0" path="res://scripts/puzz.tscn" id="5_1oooj"]
@@ -9,6 +15,7 @@
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_npfkp"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+>>>>>>> future
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_752p2"]
 texture = ExtResource("1_s00kv")

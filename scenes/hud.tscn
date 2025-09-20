@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpuveq8f1e732"]
+
+[ext_resource type="Script" uid="uid://cup5g7mfdq4ot" path="res://scripts/hud.gd" id="1_ahhtf"]
+[ext_resource type="FontFile" uid="uid://dbwvvqww158gs" path="res://assets/fonts/alagard.ttf" id="2_oo0fn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oo0fn"]
+bg_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ysmq"]
+bg_color = Color(0.23, 0.23, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fi6k"]
+bg_color = Color(0, 0.38, 0, 1)
+
+[node name="HUD" type="Node2D"]
+script = ExtResource("1_ahhtf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+z_index = 5
+custom_minimum_size = Vector2(0, 0.39)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ProgressBarHealth" type="ProgressBar" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_oo0fn")
+max_value = 320.0
+value = 320.0
+
+[node name="ProgressBarArmor" type="ProgressBar" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5ysmq")
+max_value = 320.0
+value = 320.0
+
+[node name="ProgressBarStamina" type="ProgressBar" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_6fi6k")
+value = 100.0
