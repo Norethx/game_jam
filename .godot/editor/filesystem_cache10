@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1758398751
+::res://::1758406241
 icon.svg::CompressedTexture2D/CompressedTexture2D::1166807193440764949::1758309973::1758323180::1::::<><><>0<>0<>96b069767430db556e165febfaf197ba<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1758316865::0::1::::<><><>0<>0<><>::
 ::res://assets/::1758387113
@@ -53,31 +53,31 @@ _Jump.png::CompressedTexture2D/CompressedTexture2D::4724356980233248681::1633534
 _Run.png::CompressedTexture2D/CompressedTexture2D::6622908679537502652::1633534116::1758314352::1::::<><><>0<>0<>645c693f776d322223dec2ae7db40d4d<>res://.godot/imported/_Run.png-18616933614a719d3b5e65e22b9e522b.ctex::
 ::res://assets/tilemaps/::1758315415
 Tiles.png::CompressedTexture2D/CompressedTexture2D::2483631151702861627::1570044850::1758315415::1::::<><><>0<>0<>854711f2a48228137338743bafaca167<>res://.godot/imported/Tiles.png-d6f66f04bf6d4a050f43a23fa9ff13b1.ctex::
-::res://globals/::1758309973
-game_start.gd::GDScript/GDScript::5614657312367808239::1758309973::0::1::::<>Node<><>0<>0<><>::
-::res://scenes/::1758398721
+::res://globals/::1758402094
+game_start.gd::GDScript::5614657312367808239::1758402094::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/::1758402135
 boss.tscn::PackedScene/PackedScene::1232943045076298308::1758390770::0::1::::<><><>0<>0<><>::uid://c4b1rw5hyulpj::::res://assets/sprites/GolemBoss/gollux_attack_A.png<>uid://ca3tomerao5vc::::res://assets/sprites/GolemBoss/gollux_attack_B.png<>uid://dogmajk4oxlb7::::res://assets/sprites/GolemBoss/gollux_healing.png<>uid://cc85xaqxjatjn::::res://assets/sprites/GolemBoss/gollux_hit.png<>uid://b8x7d2olx1uyp::::res://assets/sprites/GolemBoss/gollux_idle.png<>uid://b1otvwy35ox4t::::res://assets/sprites/GolemBoss/gollux_move.png
 brain_enemy.tscn::PackedScene/PackedScene::3474087593381755440::1758390770::0::1::::<><><>0<>0<><>::uid://clq1gm3g6uat5::::res://assets/sprites/brainDevour/Intellect Devourer Sprites.png
 canvas_layer.gd::GDScript/GDScript::-1::1758384962::0::1::::<>CanvasLayer<><>0<>0<><>::
 Fmap.001.tscn::PackedScene/PackedScene::5988439313283010790::1758348426::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png
-golem_2d.tscn::PackedScene/PackedScene::1807020000618928981::1758390770::0::1::::<><><>0<>0<><>::uid://dig5wug5ky6c2::::res://assets/sprites/Golem Reinforced/Golem_Armor_AttackA.png<>uid://b186sidpeqngw::::res://assets/sprites/Golem Reinforced/Golem_Armor_Idle.png<>uid://0tufw43fmgxv::::res://assets/sprites/Golem Reinforced/Golem_Armor_AttackA_FX.png<>uid://fs0ar10hu24o::::res://assets/sprites/Golem Reinforced/Golem_Armor_Run.png<>uid://dvko0d7g283lj::::res://assets/sprites/Golem Reinforced/Golem_Armor_ArmorBreak.png<>uid://dioexyhjmynua::::res://scripts/golem_2d.gd
-hud.tscn::PackedScene::3481823984982762739::1758393309::0::1::::<><><>0<>0<><>::uid://cup5g7mfdq4ot::::res://scripts/hud.gd<>uid://dbwvvqww158gs::::res://assets/fonts/alagard.ttf
-level.tscn::PackedScene::9111145621891521059::1758398721::0::1::::<><><>0<>0<><>::uid://bbndbo13yq7fr::::res://assets/tilemaps/Tiles.png<>uid://254typx87wf3::::res://scenes/parallax.tscn<>uid://dlcxoq3qojvl8::::res://scenes/PlayerKnight.tscn<>uid://ncdt7lahrqi2::::res://scenes/Penemys/penemy.tscn<>uid://dpy6drjw6g4f6::::res://scripts/penemies.gd<>uid://bpuveq8f1e732::::res://scenes/hud.tscn<>uid://cpixphbn67qhw::::res://assets/backgrounds/brush.png<>uid://ref06q81hxgb::::res://assets/backgrounds/Grass_background_1.png<>uid://dwsvpxlvn6yrf::::res://assets/backgrounds/Salt.png<>uid://ow705sa3bm16::::res://assets/backgrounds/Grass_background_2.png<>uid://by2ovjg1g5ju2::::res://scenes/platform.tscn
+golem_2d.tscn::PackedScene::1807020000618928981::1758402135::0::1::::<><><>0<>0<><>::uid://dig5wug5ky6c2::::res://assets/sprites/Golem Reinforced/Golem_Armor_AttackA.png<>uid://b186sidpeqngw::::res://assets/sprites/Golem Reinforced/Golem_Armor_Idle.png<>uid://0tufw43fmgxv::::res://assets/sprites/Golem Reinforced/Golem_Armor_AttackA_FX.png<>uid://fs0ar10hu24o::::res://assets/sprites/Golem Reinforced/Golem_Armor_Run.png<>uid://dvko0d7g283lj::::res://assets/sprites/Golem Reinforced/Golem_Armor_ArmorBreak.png<>res://scripts/golem_2d.gd
+hud.tscn::PackedScene/PackedScene::3481823984982762739::1758393309::0::1::::<><><>0<>0<><>::uid://cup5g7mfdq4ot::::res://scripts/hud.gd<>uid://dbwvvqww158gs::::res://assets/fonts/alagard.ttf
+level.tscn::PackedScene::9111145621891521059::1758402135::0::1::::<><><>0<>0<><>::uid://bbndbo13yq7fr::::res://assets/tilemaps/Tiles.png<>uid://254typx87wf3::::res://scenes/parallax.tscn<>uid://dlcxoq3qojvl8::::res://scenes/PlayerKnight.tscn<>uid://ncdt7lahrqi2::::res://scenes/Penemys/penemy.tscn<>uid://dpy6drjw6g4f6::::res://scripts/penemies.gd<>uid://bpuveq8f1e732::::res://scenes/hud.tscn<>uid://cpixphbn67qhw::::res://assets/backgrounds/brush.png<>uid://ref06q81hxgb::::res://assets/backgrounds/Grass_background_1.png<>uid://dwsvpxlvn6yrf::::res://assets/backgrounds/Salt.png<>uid://ow705sa3bm16::::res://assets/backgrounds/Grass_background_2.png<>uid://by2ovjg1g5ju2::::res://scenes/platform.tscn<>uid://rtink68nnwrs::::res://scenes/boss.tscn
 main.tscn::PackedScene/PackedScene::6432021185016298908::1758338899::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
-parallax.tscn::PackedScene::1958826118545955022::1758390757::0::1::::<><><>0<>0<><>::uid://ck20co1vfp6bn::::res://assets/backgrounds/Background_0.png<>uid://bwjysjxep16uc::::res://assets/backgrounds/parallax-02.png<>uid://dk6qrm41bv48v::::res://assets/backgrounds/parallax-03.png<>uid://pxct4rrshq7o::::res://assets/backgrounds/parallax-04.png<>uid://daqv7e63k8qcr::::res://assets/backgrounds/Background_1.png
-platform.tscn::PackedScene::4127579153105732599::1758392408::0::1::::<><><>0<>0<><>::
-PlayerKnight.tscn::PackedScene::7936890462928256019::1758398610::0::1::::<><><>0<>0<><>::uid://dbtcee76wovys::::res://assets/sprites/knight/_Idle.png<>uid://6ono41umtx7::::res://assets/sprites/knight/_Fall.png<>uid://bun2lr0rxi84e::::res://scripts/player_knight.gd<>uid://c1mglrd3po56g::::res://assets/sprites/knight/_Run.png<>uid://wtvhomj5vl1::::res://assets/sprites/knight/_Attack.png<>uid://b8krp7ori8sur::::res://assets/sprites/knight/_Jump.png<>uid://bu5ar1ciemth7::::res://assets/sprites/knight/_Attack2NoMovement.png<>uid://dnsnko6dv6etd::::res://assets/sprites/knight/_Dash.png
+parallax.tscn::PackedScene/PackedScene::1958826118545955022::1758390757::0::1::::<><><>0<>0<><>::uid://ck20co1vfp6bn::::res://assets/backgrounds/Background_0.png<>uid://bwjysjxep16uc::::res://assets/backgrounds/parallax-02.png<>uid://dk6qrm41bv48v::::res://assets/backgrounds/parallax-03.png<>uid://pxct4rrshq7o::::res://assets/backgrounds/parallax-04.png<>uid://daqv7e63k8qcr::::res://assets/backgrounds/Background_1.png
+platform.tscn::PackedScene/PackedScene::4127579153105732599::1758392408::0::1::::<><><>0<>0<><>::
+PlayerKnight.tscn::PackedScene::7936890462928256019::1758402135::0::1::::<><><>0<>0<><>::uid://dbtcee76wovys::::res://assets/sprites/knight/_Idle.png<>uid://6ono41umtx7::::res://assets/sprites/knight/_Fall.png<>uid://bun2lr0rxi84e::::res://scripts/player_knight.gd<>uid://c1mglrd3po56g::::res://assets/sprites/knight/_Run.png<>uid://wtvhomj5vl1::::res://assets/sprites/knight/_Attack.png<>uid://b8krp7ori8sur::::res://assets/sprites/knight/_Jump.png<>uid://bu5ar1ciemth7::::res://assets/sprites/knight/_Attack2NoMovement.png<>uid://dnsnko6dv6etd::::res://assets/sprites/knight/_Dash.png
 progressBar.tscn::PackedScene/PackedScene::6150606215692511711::1758390770::0::1::::<><><>0<>0<><>::
 ::res://scenes/Fenemys/::1758348418
 enemy.001.tscn::PackedScene/PackedScene::684158148631081541::1758348418::0::1::::<><><>0<>0<><>::uid://vws1ush5pmn2::::res://scripts/fenemy.001.gd<>uid://c7py4qbg6i344::::res://assets/future/chicken_run_right-Sheet.png<>uid://6y4xo2f3w1um::::res://assets/future/chicken_run_left-Sheet.png
 point_light_2d.gd::GDScript/GDScript::899126535968373245::1758348418::0::1::::<>PointLight2D<><>0<>0<><>::
-::res://scenes/Penemys/::1758398635
-penemy.tscn::PackedScene::916801501615127459::1758398635::0::1::::<><><>0<>0<><>::uid://cd6x4uul3mtdk::::res://scripts/penemy.gd<>uid://clq1gm3g6uat5::::res://assets/sprites/brainDevour/Intellect Devourer Sprites.png
-::res://scripts/::1758398721
+::res://scenes/Penemys/::1758402135
+penemy.tscn::PackedScene::916801501615127459::1758402135::0::1::::<><><>0<>0<><>::uid://cd6x4uul3mtdk::::res://scripts/penemy.gd<>uid://clq1gm3g6uat5::::res://assets/sprites/brainDevour/Intellect Devourer Sprites.png
+::res://scripts/::1758402094
 fenemy.001.gd::GDScript/GDScript::-1::1758348418::0::1::::<>CharacterBody2D<><>0<>0<><>::
 golem_2d.gd::GDScript/GDScript::-1::1758390757::0::1::::<>CharacterBody2D<><>0<>0<><>::
-hud.gd::GDScript::6209417830520876339::1758391038::0::1::::<>Node2D<><>0<>0<><>::
+hud.gd::GDScript::6209417830520876339::1758402094::0::1::::<>Node2D<><>0<>0<><>::
 main.gd::GDScript/GDScript::822789067647827553::1758309973::0::1::::<>Node<><>0<>0<><>::
-penemies.gd::GDScript::8263528263746166109::1758398721::0::1::::<>Node<><>0<>0<><>::
-penemy.gd::GDScript::5048852969433814972::1758396754::0::1::::<>Area2D<><>0<>0<><>::
-player_knight.gd::GDScript::3818694402114728562::1758397944::0::1::::<>CharacterBody2D<><>0<>0<><>::
+penemies.gd::GDScript::8263528263746166109::1758402094::0::1::::<>Node<><>0<>0<><>::
+penemy.gd::GDScript::5048852969433814972::1758402094::0::1::::<>Area2D<><>0<>0<><>::
+player_knight.gd::GDScript::3818694402114728562::1758402094::0::1::::<>CharacterBody2D<><>0<>0<><>::

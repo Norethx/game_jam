@@ -154,6 +154,7 @@ func attack1_moving(direction):
 	elif direction > 0:
 		hitbox.position.x = 10.0
 	attack_moving_hitbox.disabled = false
+
 	sprite.play("attack_moving")
 	await sprite.animation_finished
 	attack_moving_hitbox.disabled = true
