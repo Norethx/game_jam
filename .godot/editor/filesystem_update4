@@ -1,3 +1,5 @@
 res://scenes/Fenemys/enemy.001.tscn
 res://scenes/Fmap.001.tscn
 res://scripts/fenemy.001.gd
+res://scenes/fmap.001.gd
+res://globals/game_start.gd

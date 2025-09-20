@@ -1,33 +1,34 @@
-[gd_scene load_steps=16 format=3 uid="uid://j0n8qmwqgp2d"]
+[gd_scene load_steps=17 format=3 uid="uid://j0n8qmwqgp2d"]
 
 [ext_resource type="Script" uid="uid://vws1ush5pmn2" path="res://scripts/fenemy.001.gd" id="1_g0yq0"]
 [ext_resource type="Texture2D" uid="uid://c7py4qbg6i344" path="res://assets/future/chicken_run_right-Sheet.png" id="1_ifkk8"]
 [ext_resource type="Texture2D" uid="uid://6y4xo2f3w1um" path="res://assets/future/chicken_run_left-Sheet.png" id="2_l2bgi"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g0yq0"]
-animation = &"right"
+[ext_resource type="Texture2D" uid="uid://ckttg7w24c3pv" path="res://assets/future/cone_gradiente.png" id="4_n4yvv"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n4yvv"]
 animation = &"left"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hwlfp"]
-animation = &"left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e6b00"]
 animation = &"right"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_e6b00"]
+animation = &"down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ngamd"]
+animation = &"up"
+
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_ngamd"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_g0yq0")
-blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_n4yvv")
-blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_hwlfp")
-blend_point_2/pos = Vector2(-1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_e6b00")
-blend_point_3/pos = Vector2(1, 0)
+blend_point_0/node = SubResource("AnimationNodeAnimation_n4yvv")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_hwlfp")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_e6b00")
+blend_point_2/pos = Vector2(0, 1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_ngamd")
+blend_point_3/pos = Vector2(0, -1)
 
 [sub_resource type="Animation" id="Animation_vqdu1"]
-resource_name = "left"
+resource_name = "up"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -39,15 +40,39 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_ifkk8")]
+"values": [ExtResource("2_l2bgi")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/path = NodePath("PointLight2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.55271e-15, -128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.71239]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -66,15 +91,39 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_ifkk8")]
+"values": [ExtResource("2_l2bgi")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/path = NodePath("PointLight2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.55271e-15, -128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.71239]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -82,7 +131,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_8lcnc"]
-resource_name = "right"
+resource_name = "left"
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -108,38 +157,161 @@ tracks/1/keys = {
 "update": 0,
 "values": [0, 3]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-128, -4.88758e-06)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PointLight2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.14159]
+}
+
+[sub_resource type="Animation" id="Animation_3ckmm"]
+resource_name = "right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ifkk8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(128, -2.71051e-20)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PointLight2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cwrd2"]
+resource_name = "down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ifkk8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PointLight2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.62939e-06, 128)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PointLight2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3ckmm"]
 _data = {
 &"RESET": SubResource("Animation_ebjhy"),
-&"left": SubResource("Animation_vqdu1"),
-&"right": SubResource("Animation_8lcnc")
+&"down": SubResource("Animation_cwrd2"),
+&"left": SubResource("Animation_8lcnc"),
+&"right": SubResource("Animation_3ckmm"),
+&"up": SubResource("Animation_vqdu1")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epx5u"]
+size = Vector2(16, 16)
 
-[sub_resource type="Gradient" id="Gradient_6i1tr"]
-colors = PackedColorArray(0, 0, 0, 1, 0.254902, 0.635294, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pahs6"]
-gradient = SubResource("Gradient_6i1tr")
-width = 214
-height = 214
-fill_from = Vector2(0.4, 0.5)
-fill_to = Vector2(1, 0.5)
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="enemy_patrol" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree")]
+scale = Vector2(2.5, 2.5)
+motion_mode = 1
 script = ExtResource("1_g0yq0")
+animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ifkk8")
 hframes = 4
-frame = 1
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendSpace2D_ngamd")
 anim_player = NodePath("AnimationPlayer")
-parameters/blend_position = Vector2(0, 0.879121)
+parameters/blend_position = Vector2(-0.0015949, 0.021978)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree"]
 root_node = NodePath("../..")
@@ -147,8 +319,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_3ckmm")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_epx5u")
-
 [node name="PointLight2D" type="PointLight2D" parent="."]
-texture = SubResource("GradientTexture2D_pahs6")
+position = Vector2(128, 0)
+scale = Vector2(0.5, 0.5)
+color = Color(0.533333, 1, 1, 1)
+texture = ExtResource("4_n4yvv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_epx5u")

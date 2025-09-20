@@ -1,3 +1,7 @@
+LightOccluder2D
+Polygon2D
+DirectionalLight2D
+PointLight2D
 ParallaxLayer
 ParallaxBackground
 CollisionShape2D
@@ -9,4 +13,3 @@ Node
 TileMapLayer
 Camera2D
 AnimatedSprite2D
-CharacterBody2D

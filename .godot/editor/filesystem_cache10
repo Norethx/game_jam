@@ -1,24 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1758316596
-icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758299299::1758299356::1::::<><><>0<>0<>88157b931c7704b281135964cf323fb0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile/TextFile::-1::1758316433::0::1::::<><><>0<>0<><>::
-::res://assets/::1758316463
-Background_0.png::CompressedTexture2D/CompressedTexture2D::5531990275986379155::1758316433::1758316463::1::::<><><>0<>0<>17e737c085466c1baaed757afbdeb812<>res://.godot/imported/Background_0.png-ccfa0f0d277c40143d1e8ec3db90eaee.ctex::
-Background_1.png::CompressedTexture2D/CompressedTexture2D::7193624556666520317::1758316433::1758316463::1::::<><><>0<>0<>0315ca7b2fc49b1a2d58dfcfa7c060bb<>res://.godot/imported/Background_1.png-2dba1b6a18ca04c8cd366425fce2eff9.ctex::
-icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758299299::1758299356::1::::<><><>0<>0<>48a58244e995cebcc8fdae2ad9463e6a<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
-::res://assets/future/::1758310858
-players blue x1.png::CompressedTexture2D/CompressedTexture2D::3866569301946938109::1758310858::1758310858::1::::<><><>0<>0<>b098606f42c55ceb7d5aa84861fb7c35<>res://.godot/imported/players blue x1.png-f254e63de687544344ff2671252df619.ctex::
-tileset x1.png::CompressedTexture2D/CompressedTexture2D::6268302973856655408::1758310792::1758310846::1::::<><><>0<>0<>2f5b2d75615b6613b2858becd26c8e08<>res://.godot/imported/tileset x1.png-dbbd2c814aedeef5a60072efd87bff27.ctex::
-::res://assets/sprites/::1758316433
-::res://assets/sprites/knight/::1758316463
-_Idle.png::CompressedTexture2D/CompressedTexture2D::7268802910171238598::1758316433::1758316463::1::::<><><>0<>0<>65580e0fb0eaed61957d05f66f4076a9<>res://.godot/imported/_Idle.png-5e88d08e5ae0656ea5105ce9810d6f51.ctex::
-::res://globals/::1758299299
-game_start.gd::GDScript/GDScript::5614657312367808239::1758299299::0::1::::<>Node<><>0<>0<><>::
-::res://scenes/::1758316577
-Fmap.001.tscn::PackedScene::5988439313283010790::1758316577::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png
-level.tscn::PackedScene::9111145621891521059::1758316463::0::1::::<><><>0<>0<><>::uid://bbvbe3ten3p64::::res://scenes/PlayerKnight.tscn<>uid://dgjeycgdfvi2g::::res://scripts/player_knight.gd
-main.tscn::PackedScene/PackedScene::6432021185016298908::1758299299::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
-PlayerKnight.tscn::PackedScene::2500030820540095719::1758316463::0::1::::<><><>0<>0<><>::uid://dbtcee76wovys::::res://assets/sprites/knight/_Idle.png
-::res://scripts/::1758316433
-main.gd::GDScript/GDScript::822789067647827553::1758299299::0::1::::<>Node<><>0<>0<><>::
-player_knight.gd::GDScript/GDScript::-1::1758316433::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://::1758317624
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758309863::1758309904::1::::<><><>0<>0<>88157b931c7704b281135964cf323fb0<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1758317585::0::1::::<><><>0<>0<><>::
+::res://assets/::1758317585
+Background_0.png::CompressedTexture2D/CompressedTexture2D::5531990275986379155::1758317585::1758317585::1::::<><><>0<>0<>17e737c085466c1baaed757afbdeb812<>res://.godot/imported/Background_0.png-ccfa0f0d277c40143d1e8ec3db90eaee.ctex::
+Background_1.png::CompressedTexture2D/CompressedTexture2D::7193624556666520317::1758317585::1758317585::1::::<><><>0<>0<>0315ca7b2fc49b1a2d58dfcfa7c060bb<>res://.godot/imported/Background_1.png-2dba1b6a18ca04c8cd366425fce2eff9.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::2633833542494581561::1758309863::1758309904::1::::<><><>0<>0<>48a58244e995cebcc8fdae2ad9463e6a<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
+::res://assets/future/::1758333921
+chicken_run_left-Sheet.png::CompressedTexture2D::2227201862228589804::1758314274::1758317624::1::::<><><>0<>0<>808b35f4d496b2e610b68eac9e97aa02<>res://.godot/imported/chicken_run_left-Sheet.png-8f8c86a51c8a951d7303390407dac55f.ctex::
+chicken_run_right-Sheet.png::CompressedTexture2D::7051359868196565655::1758314274::1758317624::1::::<><><>0<>0<>b62b5c35102275cf866c6d010655e671<>res://.godot/imported/chicken_run_right-Sheet.png-23ad468f513f176275d82bdfbd5f5bd7.ctex::
+cone_gradiente.png::CompressedTexture2D::5515119034718177347::1758332709::1758332709::1::::<><><>0<>0<>03d3e463df798aec64aee9b26b3d29f9<>res://.godot/imported/cone_gradiente.png-57a5912d6b946b69f79942888231dc44.ctex::
+f_patrol_enemy.png::CompressedTexture2D::7891022563274713836::1758333921::1758333922::1::::<><><>0<>0<>0725fb3b5cb9d2e511cdbfde0e5d2d25<>res://.godot/imported/f_patrol_enemy.png-8d4f0524ea4ab1cb6b57da2ddb1a5775.ctex::
+players blue x1.png::CompressedTexture2D/CompressedTexture2D::3866569301946938109::1758313253::1758313331::1::::<><><>0<>0<>b098606f42c55ceb7d5aa84861fb7c35<>res://.godot/imported/players blue x1.png-f254e63de687544344ff2671252df619.ctex::
+tileset x1.png::CompressedTexture2D/CompressedTexture2D::6268302973856655408::1758313253::1758313331::1::::<><><>0<>0<>2f5b2d75615b6613b2858becd26c8e08<>res://.godot/imported/tileset x1.png-dbbd2c814aedeef5a60072efd87bff27.ctex::
+::res://assets/sprites/::1758317585
+::res://assets/sprites/knight/::1758317585
+_Idle.png::CompressedTexture2D/CompressedTexture2D::7268802910171238598::1758317585::1758317585::1::::<><><>0<>0<>65580e0fb0eaed61957d05f66f4076a9<>res://.godot/imported/_Idle.png-5e88d08e5ae0656ea5105ce9810d6f51.ctex::
+::res://globals/::1758309863
+game_start.gd::GDScript::5614657312367808239::1758309863::0::1::::<>Node<><>0<>0<><>::
+::res://scenes/::1758333561
+Fmap.001.tscn::PackedScene::5988439313283010790::1758333561::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png<>uid://j0n8qmwqgp2d::::res://scenes/Fenemys/enemy.001.tscn
+level.tscn::PackedScene::9111145621891521059::1758317585::0::1::::<><><>0<>0<><>::uid://bbvbe3ten3p64::::res://scenes/PlayerKnight.tscn<>uid://dgjeycgdfvi2g::::res://scripts/player_knight.gd
+main.tscn::PackedScene::6432021185016298908::1758309863::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
+PlayerKnight.tscn::PackedScene::2500030820540095719::1758317585::0::1::::<><><>0<>0<><>::uid://dbtcee76wovys::::res://assets/sprites/knight/_Idle.png
+::res://scenes/Fenemys/::1758333561
+enemy.001.tscn::PackedScene::684158148631081541::1758333561::0::1::::<><><>0<>0<><>::uid://vws1ush5pmn2::::res://scripts/fenemy.001.gd<>uid://c7py4qbg6i344::::res://assets/future/chicken_run_right-Sheet.png<>uid://6y4xo2f3w1um::::res://assets/future/chicken_run_left-Sheet.png<>uid://ckttg7w24c3pv::::res://assets/future/cone_gradiente.png
+::res://scripts/::1758333539
+fenemy.001.gd::GDScript::1520522442131543101::1758333539::0::1::::<>CharacterBody2D<><>0<>0<><>::
+main.gd::GDScript::822789067647827553::1758309863::0::1::::<>Node<><>0<>0<><>::
+player_knight.gd::GDScript::7599260354178169108::1758317585::0::1::::<>CharacterBody2D<><>0<>0<><>::

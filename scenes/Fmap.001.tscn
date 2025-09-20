@@ -519,3 +519,9 @@ tile_set = SubResource("TileSet_c5rmr")
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color(0.141176, 0.160784, 0.231373, 1)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_752p2")]
+position = Vector2(80, 560)
+size_patrol_d = 0
+size_patrol_l = 100
+size_patrol_u = 0
