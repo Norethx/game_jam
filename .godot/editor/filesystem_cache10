@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1758354465
+::res://::1758367995
 icon.svg::CompressedTexture2D/CompressedTexture2D::1166807193440764949::1758309863::1758346390::1::::<><><>0<>0<>96b069767430db556e165febfaf197ba<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1758317585::0::1::::<><><>0<>0<><>::
 ::res://assets/::1758346358
@@ -34,17 +34,17 @@ _Run.png::CompressedTexture2D/CompressedTexture2D::6622908679537502652::17583463
 Tiles.png::CompressedTexture2D/CompressedTexture2D::2483631151702861627::1758346358::1758346390::1::::<><><>0<>0<>854711f2a48228137338743bafaca167<>res://.godot/imported/Tiles.png-d6f66f04bf6d4a050f43a23fa9ff13b1.ctex::
 ::res://globals/::1758345258
 game_start.gd::GDScript/GDScript::5614657312367808239::1758345258::0::1::::<>Node<><>0<>0<><>::
-::res://scenes/::1758354429
-Fmap.001.tscn::PackedScene::5988439313283010790::1758353073::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png<>uid://j0n8qmwqgp2d::::res://scenes/Fenemys/enemy.001.tscn
+::res://scenes/::1758361969
+Fmap.001.tscn::PackedScene::5988439313283010790::1758361969::0::1::::<><><>0<>0<><>::uid://cvkobfq8efg13::::res://assets/future/tileset x1.png<>uid://j0n8qmwqgp2d::::res://scenes/Fenemys/enemy.001.tscn<>uid://br2jqr112e1fa::::res://scenes/PlayerAstronaut.tscn
 level.tscn::PackedScene/PackedScene::9111145621891521059::1758346358::0::1::::<><><>0<>0<><>::uid://bbndbo13yq7fr::::res://assets/tilemaps/Tiles.png<>uid://254typx87wf3::::res://scenes/parallax.tscn<>uid://dlcxoq3qojvl8::::res://scenes/PlayerKnight.tscn
 main.tscn::PackedScene/PackedScene::6432021185016298908::1758309863::0::1::::<><><>0<>0<><>::uid://lythlngafswf::::res://scripts/main.gd
 parallax.tscn::PackedScene/PackedScene::1958826118545955022::1758346358::0::1::::<><><>0<>0<><>::uid://ck20co1vfp6bn::::res://assets/backgrounds/Background_0.png<>uid://bwjysjxep16uc::::res://assets/backgrounds/parallax-02.png<>uid://dk6qrm41bv48v::::res://assets/backgrounds/parallax-03.png<>uid://pxct4rrshq7o::::res://assets/backgrounds/parallax-04.png
-PlayerAstronaut.tscn::PackedScene::3635945184816098850::1758353073::0::1::::<><><>0<>0<><>::uid://cqqp3leudm6di::::res://scripts/player_astronaut.gd<>uid://c338d0sssayfn::::res://assets/sprites/Astronaut/astronaut1.png<>uid://jf0534n5vkhf::::res://assets/sprites/Astronaut/astronaut3.png<>uid://c68u1kneim7ky::::res://assets/sprites/Astronaut/astronaut2.png
+PlayerAstronaut.tscn::PackedScene::3635945184816098850::1758361969::0::1::::<><><>0<>0<><>::uid://cqqp3leudm6di::::res://scripts/player_astronaut.gd<>uid://c338d0sssayfn::::res://assets/sprites/Astronaut/astronaut1.png<>uid://jf0534n5vkhf::::res://assets/sprites/Astronaut/astronaut3.png<>uid://c68u1kneim7ky::::res://assets/sprites/Astronaut/astronaut2.png
 PlayerKnight.tscn::PackedScene/PackedScene::7936890462928256019::1758346358::0::1::::<><><>0<>0<><>::uid://dbtcee76wovys::::res://assets/sprites/knight/_Idle.png<>uid://6ono41umtx7::::res://assets/sprites/knight/_Fall.png<>uid://bun2lr0rxi84e::::res://scripts/player_knight.gd<>uid://c1mglrd3po56g::::res://assets/sprites/knight/_Run.png<>uid://wtvhomj5vl1::::res://assets/sprites/knight/_Attack.png<>uid://b8krp7ori8sur::::res://assets/sprites/knight/_Jump.png<>uid://bu5ar1ciemth7::::res://assets/sprites/knight/_Attack2NoMovement.png
-::res://scenes/Fenemys/::1758354364
-enemy.001.tscn::PackedScene::684158148631081541::1758354364::0::1::::<><><>0<>0<><>::uid://vws1ush5pmn2::::res://scripts/fenemy.001.gd<>uid://c7py4qbg6i344::::res://assets/future/chicken_run_right-Sheet.png<>uid://6y4xo2f3w1um::::res://assets/future/chicken_run_left-Sheet.png<>uid://ckttg7w24c3pv::::res://assets/future/cone_gradiente.png
-::res://scripts/::1758354364
-fenemy.001.gd::GDScript::1520522442131543101::1758354364::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scenes/Fenemys/::1758361969
+enemy.001.tscn::PackedScene::684158148631081541::1758361969::0::1::::<><><>0<>0<><>::uid://vws1ush5pmn2::::res://scripts/fenemy.001.gd<>uid://c7py4qbg6i344::::res://assets/future/chicken_run_right-Sheet.png<>uid://6y4xo2f3w1um::::res://assets/future/chicken_run_left-Sheet.png<>uid://ckttg7w24c3pv::::res://assets/future/cone_gradiente.png
+::res://scripts/::1758361595
+fenemy.001.gd::GDScript::1520522442131543101::1758361595::0::1::::<>CharacterBody2D<><>0<>0<><>::
 main.gd::GDScript/GDScript::822789067647827553::1758309863::0::1::::<>Node<><>0<>0<><>::
 player_astronaut.gd::GDScript/GDScript::5929854251629805050::1758346358::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_knight.gd::GDScript/GDScript::3818694402114728562::1758346358::0::1::::<>CharacterBody2D<><>0<>0<><>::

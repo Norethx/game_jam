@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://crk3yq8g0h7xq"]
+[gd_scene load_steps=5 format=4 uid="uid://crk3yq8g0h7xq"]
 
 [ext_resource type="Texture2D" uid="uid://cvkobfq8efg13" path="res://assets/future/tileset x1.png" id="1_s00kv"]
 [ext_resource type="PackedScene" uid="uid://j0n8qmwqgp2d" path="res://scenes/Fenemys/enemy.001.tscn" id="2_752p2"]
-[ext_resource type="PackedScene" uid="uid://br2jqr112e1fa" path="res://scenes/PlayerAstronaut.tscn" id="3_c5rmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_752p2"]
 texture = ExtResource("1_s00kv")
@@ -523,17 +522,40 @@ tile_map_data = PackedByteArray("AAAOABoAAAAXAAwAADAOABkAAAAXAA0AADAPABoAAAAWAAw
 tile_set = SubResource("TileSet_c5rmr")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.141176, 0.160784, 0.231373, 1)
 
-[node name="Player2" parent="." instance=ExtResource("3_c5rmr")]
-position = Vector2(800, 560)
-collision_mask = 7
-
 [node name="enemy_patrol" parent="." instance=ExtResource("2_752p2")]
-position = Vector2(760, 360)
-size_patrol_r = 30
-size_patrol_d = 30
-size_patrol_l = 30
-size_patrol_u = 30
+position = Vector2(40, 40)
+scale = Vector2(2, 2)
+size_patrol_r = 350
+size_patrol_d = 800
+size_patrol_l = 350
+size_patrol_u = 800
+speed = 80.0
+
+[node name="enemy_patrol2" parent="." instance=ExtResource("2_752p2")]
+position = Vector2(840, 160)
+scale = Vector2(2, 2)
+size_patrol_r = 250
+size_patrol_d = 0
+size_patrol_l = 250
+size_patrol_u = 0
+speed = 80.0
+
+[node name="enemy_patrol3" parent="." instance=ExtResource("2_752p2")]
+position = Vector2(1244, 511)
+scale = Vector2(2, 2)
+size_patrol_r = 600
+size_patrol_d = 0
+size_patrol_l = 600
+size_patrol_u = 0
+speed = 80.0
+
+[node name="enemy_patrol4" parent="." instance=ExtResource("2_752p2")]
+position = Vector2(1086, 50)
+scale = Vector2(2, 2)
+size_patrol_r = 0
+size_patrol_d = 600
+size_patrol_l = 0
+size_patrol_u = 600
 speed = 80.0
