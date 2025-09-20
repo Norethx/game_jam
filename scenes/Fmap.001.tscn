@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://crk3yq8g0h7xq"]
+[gd_scene load_steps=4 format=4 uid="uid://crk3yq8g0h7xq"]
 
 [ext_resource type="Texture2D" uid="uid://cvkobfq8efg13" path="res://assets/future/tileset x1.png" id="1_s00kv"]
-[ext_resource type="PackedScene" uid="uid://j0n8qmwqgp2d" path="res://scenes/Fenemys/enemy.001.tscn" id="2_752p2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_752p2"]
 texture = ExtResource("1_s00kv")
