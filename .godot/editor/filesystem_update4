@@ -5,3 +5,6 @@ res://scenes/parallax.tscn
 res://scenes/player_knight.gd
 res://scenes/character_remake.tscn
 res://scripts/character_remake.gd
+res://scenes/Fenemys/enemy.001.tscn
+res://scenes/Fmap.001.tscn
+res://scripts/fenemy.001.gd
