@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://j0n8qmwqgp2d"]
+[gd_scene load_steps=18 format=3 uid="uid://j0n8qmwqgp2d"]
 
 [ext_resource type="Script" uid="uid://vws1ush5pmn2" path="res://scripts/fenemy.001.gd" id="1_g0yq0"]
 [ext_resource type="Texture2D" uid="uid://c7py4qbg6i344" path="res://assets/future/chicken_run_right-Sheet.png" id="1_ifkk8"]
@@ -295,8 +295,9 @@ _data = {
 &"up": SubResource("Animation_vqdu1")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epx5u"]
-size = Vector2(12.8, 12.8)
+[sub_resource type="CircleShape2D" id="CircleShape2D_n4yvv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4yvv"]
 
 [node name="enemy_patrol" type="CharacterBody2D" node_paths=PackedStringArray("animation_tree")]
 scale = Vector2(2.5, 2.5)
@@ -326,6 +327,8 @@ libraries = {
 position = Vector2(-0.204147, 2.81319)
 rotation = 1.5733
 scale = Vector2(0.5, 0.5)
+shadow_enabled = true
+shadow_item_cull_mask = 3
 texture = ExtResource("4_n4yvv")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -341,5 +344,16 @@ target_position = Vector2(272, 16)
 collision_mask = 3
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-4.76837e-07, 1.43051e-07)
-shape = SubResource("RectangleShape2D_epx5u")
+position = Vector2(-2.84217e-14, 0)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_n4yvv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_n4yvv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

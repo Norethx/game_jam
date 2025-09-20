@@ -6,3 +6,4 @@ res://scenes/main.tscn
 res://scenes/level.tscn
 res://scenes/Fmap.001.tscn
 res://scenes/fmap.001.gd
+res://scripts/fenemy.001.gd

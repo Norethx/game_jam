@@ -71,7 +71,13 @@ func do_chase():
 	velocity = dir * speed_chase
 	animation_tree.set("parameters/blend_position", velocity)
 	move_and_slide()
-	
+
+func verify_collision():
+	var check = get_last_slide_collision()
+	var body = check.get_collider()
+	print(body)
+	if body == CharacterBody2D && body.is_in_group() == "player":
+		print("morreu")
 	
 func update_vision():
 	var forward = sign_step.normalized()
@@ -101,3 +107,8 @@ func _can_see_player(ray: RayCast2D) -> bool:
 			player_ref = collider
 			return true
 	return false
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		print("UNLIMITED GENOCIDE ON THE PLAYERS!!!!!!!!!!!")
