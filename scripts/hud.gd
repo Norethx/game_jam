@@ -5,6 +5,8 @@ extends Node2D
 @onready var progress_bar_stamina: ProgressBar = $CanvasLayer/HBoxContainer/ProgressBarStamina
 
 
+
+
 func _on_player_knight_upate_armor(amount: float) -> void:
 	progress_bar_armor.value = amount
 
