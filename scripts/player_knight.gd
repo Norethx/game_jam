@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal upate_health(amount: float)
+signal upate_armor(amount: float)
+signal update_stamina(amount: float)
 
 const SPEED = 150.0
 const JUMP_VELOCITY = -400.0
@@ -198,9 +201,11 @@ func take_health_damge(amount: float):
 	if damage:
 		if damage > health:
 			health = 0
+			upate_health.emit(health)
 			die()
 			return
 		health -= damage
+		upate_health.emit(health)
 
 func take_armor_damge(amount: float) -> float:
 	var damage: float = 0
@@ -212,8 +217,10 @@ func take_armor_damge(amount: float) -> float:
 	if amount > armor:
 		damage = amount - armor
 		armor = 0
+		upate_armor.emit(armor)
 		return damage
 	armor -= amount
+	upate_armor.emit(armor)
 	return 0;
 
 func die():
@@ -234,6 +241,7 @@ func use_stamina(amount: float) -> bool:
 		print("Stamina: not enougth!")
 		return false
 	stamina -= amount
+	update_stamina.emit(stamina)
 	stamina_last_use_time = get_ms()
 	print("Stamina:", stamina)
 	return true
@@ -246,8 +254,10 @@ func colldown_stamina():
 	if get_ms() - stamina_last_cooldown_tick > 0.1 * 1000:
 		if stamina + 2 >= stamina_total:
 			stamina = stamina_total
+			update_stamina.emit(stamina)
 		else:
 			stamina += 2
+			update_stamina.emit(stamina)
 		print("stamina regen:", stamina)
 		stamina_last_cooldown_tick = get_ms()
 

@@ -1,3 +1,5 @@
+Label
+CanvasLayer
 RayCast2D
 Node
 Sprite2D
@@ -10,6 +12,3 @@ CharacterBody2D
 AnimationPlayer
 AnimationTree
 TileMapLayer
-TileMap
-Node2D
-ParallaxLayer
