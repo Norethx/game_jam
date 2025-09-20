@@ -688,7 +688,7 @@ position = Vector2(177, 345)
 [node name="Penemy" parent="Penemies" instance=ExtResource("4_mx8sn")]
 position = Vector2(357, 326)
 
-[node name="HUD" parent="." instance=ExtResource("5_ppgk2")]
+[node name="HUD_bars" parent="." instance=ExtResource("5_ppgk2")]
 
 [node name="ParallaxPlatform" type="ParallaxBackground" parent="."]
 

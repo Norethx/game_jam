@@ -328,12 +328,11 @@ script = ExtResource("1_wauxr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -40)
 sprite_frames = SubResource("SpriteFrames_r8tpb")
-animation = &"attack_moving"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-4.5, -14.5)
 shape = SubResource("RectangleShape2D_rfnm5")
 
@@ -344,6 +343,7 @@ limit_left = -1
 limit_right = 2860
 
 [node name="StrikeArea" type="Area2D" parent="."]
+visible = false
 
 [node name="AttackStillHitbox" type="CollisionShape2D" parent="StrikeArea"]
 position = Vector2(19, -19)

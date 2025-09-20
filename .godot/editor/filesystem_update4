@@ -1,4 +1,5 @@
-res://scenes/Fmap.001.tscn
-res://scenes/level.tscn
 res://scenes/PlayerKnight.tscn
-res://scenes/hud.tscn
+res://scenes/level.tscn
+res://scenes/hud_dialogue.tscn
+res://scenes/Fmap.001.tscn
+res://addons/dialogue_manager/dialogue_responses_menu.gd

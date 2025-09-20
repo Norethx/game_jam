@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_v4qp4"]
+
+[resource]
+script = ExtResource("1_v4qp4")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Fourty two", "São Paulo")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Fourty two",
+&"id": "1",
+&"next_id": "2",
+&"text": "Hello, hello!!",
+&"type": "dialogue"
+},
+"2": {
+&"character": "Fourty two",
+&"id": "2",
+&"next_id": "3",
+&"text": "HELLOOOOOOOOOO!!!! Shit... testing — is there someone on the other side??",
+&"type": "dialogue"
+},
+"3": {
+&"character": "São Paulo",
+&"id": "3",
+&"next_id": "4",
+&"text": "HOW IS THIS POSSIBLE?! Is there a ghost? Am I going crazy?",
+&"type": "dialogue"
+},
+"4": {
+&"character": "São Paulo",
+&"id": "4",
+&"next_id": "5",
+&"text": "I should've stopped drinking — I'm already hearing things...",
+&"type": "dialogue"
+},
+"5": {
+&"character": "Fourty two",
+&"id": "5",
+&"next_id": "6",
+&"text": "Idiot, you're not hearing things; I'm talking to you through waves...",
+&"type": "dialogue"
+},
+"6": {
+&"character": "Fourty two",
+&"id": "6",
+&"next_id": "7",
+&"text": "Because I'm explaining it... it doesn't matter!",
+&"type": "dialogue"
+},
+"7": {
+&"character": "Fourty two",
+&"id": "7",
+&"next_id": "8",
+&"text": "Just know you only need to keep yourself safe.",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"9": {
+&"id": "9",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+}
+}
+raw_text = "~ start
+Fourty two: Hello, hello!!
+Fourty two: HELLOOOOOOOOOO!!!! Shit... testing — is there someone on the other side??
+São Paulo: HOW IS THIS POSSIBLE?! Is there a ghost? Am I going crazy?
+São Paulo: I should've stopped drinking — I'm already hearing things...
+Fourty two: Idiot, you're not hearing things; I'm talking to you through waves...
+Fourty two: Because I'm explaining it... it doesn't matter!
+Fourty two: Just know you only need to keep yourself safe.
+=> END"
+metadata/dialogue_manager_version = "3.7.1"
