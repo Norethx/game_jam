@@ -28,6 +28,17 @@ var blunt_damage: float = 20
 var stamina: float = 100
 
 
+var stamina_cooldown: float = 0.5
+var stamina_last_use_time: int = 0
+var stamina_last_cooldown_tick: int = 0
+var stamina_total: float = 100
+enum Stamina {
+	JUMP_LOSS = 10,
+	DASH_LOSS = 25,
+	HIT_LOSS = 5,
+}
+
+
 func _ready() -> void:
 	add_to_group("player")
 	floor_max_angle = 45.0
@@ -43,6 +54,7 @@ func _physics_process(delta: float) -> void:
 	init_animations()
 	init_hitbox(direction)
 	init_movement(direction)
+	colldown_stamina()
 	if Input.is_action_just_pressed("attack1"): attack1_handler(direction)
 	if Input.is_action_just_pressed("jump"): jump_handler()
 	if Input.is_action_just_pressed("dash"): dash_handler()
@@ -112,6 +124,8 @@ func init_movement(direction: float):
 
 func jump_handler():
 	if not is_attacking and is_on_floor():
+			if not use_stamina(Stamina.JUMP_LOSS):
+				return
 			velocity.y = JUMP_VELOCITY
 
 # =============================================
@@ -120,6 +134,8 @@ func jump_handler():
 
 func attack1_handler(direction):
 	if not is_attacking:
+		if not use_stamina(Stamina.HIT_LOSS):
+			return
 		if velocity.x != 0:
 			attack1_moving(direction)
 		else:
@@ -154,6 +170,8 @@ func attack1_still():
 # ============================================
 
 func dash_handler():
+	if not use_stamina(Stamina.DASH_LOSS):
+		return
 	is_dashing = true
 	sprite.play("dash")
 	if sprite.flip_h:
@@ -201,6 +219,42 @@ func take_armor_damge(amount: float) -> float:
 func die():
 	if is_death_enabled:
 		is_dead = true
+		print("You are Dead")
 	else:
 		is_uncouncious = true
-	print("E MORREU")
+		print("You are Uncouncious")
+
+# ===============================================
+# =================== STAMINA ===================
+# ===============================================
+
+func use_stamina(amount: float) -> bool:
+	print("amount:", amount)
+	if amount > stamina:
+		print("Stamina: not enougth!")
+		return false
+	stamina -= amount
+	stamina_last_use_time = get_ms()
+	print("Stamina:", stamina)
+	return true
+	
+func colldown_stamina():
+	if get_ms() - stamina_last_use_time < 1.5 * 1000:
+		return
+	if stamina >= stamina_total:
+		return
+	if get_ms() - stamina_last_cooldown_tick > 0.1 * 1000:
+		if stamina + 2 >= stamina_total:
+			stamina = stamina_total
+		else:
+			stamina += 2
+		print("stamina regen:", stamina)
+		stamina_last_cooldown_tick = get_ms()
+
+# ===============================================
+# =================== SYSTEM TIME ===================
+# ===============================================
+
+func get_ms():
+	var time: int = Time.get_ticks_msec()
+	return time
