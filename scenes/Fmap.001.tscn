@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5vlknus2go5e" path="res://scenes/fmap.001.gd" id="1_73ic1"]
 [ext_resource type="Texture2D" uid="uid://cvkobfq8efg13" path="res://assets/future/tileset x1.png" id="1_s00kv"]
-[ext_resource type="PackedScene" uid="uid://br2jqr112e1fa" path="res://PlayerAstronaut.tscn" id="2_752p2"]
+[ext_resource type="PackedScene" path="res://PlayerAstronaut.tscn" id="2_752p2"]
 [ext_resource type="Texture2D" uid="uid://b22gvfgwy61t" path="res://assets/future/CosmicLegacy_PetricakeGamesPNG.png" id="2_c5rmr"]
 [ext_resource type="PackedScene" uid="uid://bn2jm556alxf0" path="res://scripts/puzz.tscn" id="5_1oooj"]
 

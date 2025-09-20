@@ -1,31 +1,42 @@
 extends Node2D
 
-var puzz_1_check = 0
-@onready var body_char: CharacterBody2D = $CharacterBody2D/Body
-@onready var puzz_1_1: TileMapLayer = $puzz1_1
-@onready var puzz_1_2: TileMapLayer = $puzz1_2
-@onready var puzz_1_3: TileMapLayer = $puzz1_3
-@onready var puzz_1_4: TileMapLayer = $puzz1_4
+@onready var puzz_check = 0
+@onready var puzz_1: Node2D = $Puzz_1
+@onready var puzz_4: Node2D = $Puzz_4
+@onready var puzz_2: Node2D = $Puzz_2
+@onready var puzz_3: Node2D = $Puzz_3
+@onready var communicator: Node2D = $communicator
+var	past_comunicator = false
+@onready var bool_puzz = [false,false,false,false]
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("interact") && puzz_1_check <= 1 && puzz_1_3.position.distance_to(body_char.position) < 9.5:
-		puzz_1_check = 1
-	elif puzz_1_check > 1:
-		puzz_1_check = 0
-	if Input.is_action_just_pressed("interact") && puzz_1_check == 1 && puzz_1_2.position.distance_to(body_char.position) < 9.5:
-		puzz_1_check = 2
-	elif puzz_1_check == 2:
-		puzz_1_check = puzz_1_check
-	elif puzz_1_check < 1:
-		puzz_1_check = 0
-	if Input.is_action_just_pressed("interact") && puzz_1_check == 2 && puzz_1_4.position.distance_to(body_char.position) < 9.5:
-		puzz_1_check = 3
-	elif puzz_1_check == 3:
-		puzz_1_check = puzz_1_check
-	elif puzz_1_check < 2:
-		puzz_1_check = 0
-	if Input.is_action_just_pressed("interact") && puzz_1_check < 3 && puzz_1_1.position.distance_to(body_char.position) < 9.5:
-		puzz_1_check = 0
-	elif puzz_1_check == 3:
-		puzz_1_check = 4
+	if Input.is_action_just_pressed("interact") && bool_puzz[0] && puzz_1.visible:
+		puzz_1.visible = false
+		puzz_check += 1
+	elif Input.is_action_just_pressed("interact") && bool_puzz[1] && puzz_4.visible:
+		puzz_4.visible = false
+		puzz_check += 1
+	elif Input.is_action_just_pressed("interact") && bool_puzz[2] && puzz_2.visible:
+		puzz_2.visible = false
+		puzz_check += 1
+	elif Input.is_action_just_pressed("interact") && bool_puzz[3] && puzz_3.visible:
+		puzz_3.visible = false
+		puzz_check += 1
+	elif Input.is_action_just_pressed("interact") && puzz_check < 4:
+		print("NÃO")
+
+func _on_puzz_1_in_reach(reached: bool) -> void:
+	bool_puzz[0] = reached
+
+
+func _on_puzz_4_in_reach(reached: bool) -> void:
+	bool_puzz[1] = reached
+
+
+func _on_puzz_2_in_reach(reached: bool) -> void:
+	bool_puzz[2] = reached
+
+
+func _on_puzz_3_in_reach(reached: bool) -> void:
+	bool_puzz[3] = reached

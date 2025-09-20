@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://drsfrvyc0xtjg"]
+[gd_scene load_steps=6 format=4 uid="uid://cuo6p67y3wlge"]
 
 [ext_resource type="Texture2D" uid="uid://b22gvfgwy61t" path="res://assets/future/CosmicLegacy_PetricakeGamesPNG.png" id="1_112p8"]
 [ext_resource type="PackedScene" uid="uid://j0n8qmwqgp2d" path="res://scenes/Fenemys/enemy.001.tscn" id="2_e2u21"]
-[ext_resource type="PackedScene" uid="uid://br2jqr112e1fa" path="res://scenes/PlayerAstronaut.tscn" id="3_bss38"]
+[ext_resource type="PackedScene" path="res://PlayerAstronaut.tscn" id="3_bss38"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tda05"]
 texture = ExtResource("1_112p8")
