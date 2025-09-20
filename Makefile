@@ -16,7 +16,3 @@ past:
 future:
 	@git push origin future
 
-
-teste:
-	echo teste
-
