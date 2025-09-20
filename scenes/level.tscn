@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://d22ricinbil1t"]
+[gd_scene load_steps=9 format=4 uid="uid://d22ricinbil1t"]
 
 [ext_resource type="Texture2D" uid="uid://bbndbo13yq7fr" path="res://assets/tilemaps/Tiles.png" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://254typx87wf3" path="res://scenes/parallax.tscn" id="3_mx8sn"]
 [ext_resource type="PackedScene" uid="uid://dlcxoq3qojvl8" path="res://scenes/PlayerKnight.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://ncdt7lahrqi2" path="res://scenes/Penemys/penemy.tscn" id="4_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://b4vr0mn8fg4gb" path="res://scenes/hud.tscn" id="5_ppgk2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7c3h"]
 distance = -600.0
@@ -48,3 +49,9 @@ position = Vector2(177, 345)
 
 [node name="Penemy" parent="Penemies" instance=ExtResource("4_mx8sn")]
 position = Vector2(357, 326)
+
+[node name="HUD" parent="." instance=ExtResource("5_ppgk2")]
+
+[connection signal="upate_armor" from="PlayerKnight" to="HUD" method="_on_player_knight_upate_armor"]
+[connection signal="upate_health" from="PlayerKnight" to="HUD" method="_on_player_knight_upate_health"]
+[connection signal="update_stamina" from="PlayerKnight" to="HUD" method="_on_player_knight_update_stamina"]
