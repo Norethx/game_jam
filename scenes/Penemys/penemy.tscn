@@ -163,3 +163,4 @@ target_position = Vector2(0, 42)
 position = Vector2(0, -10)
 rotation = -1.5708
 target_position = Vector2(0, 30)
+collision_mask = 9
