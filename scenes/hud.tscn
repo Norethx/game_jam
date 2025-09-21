@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bpuveq8f1e732"]
 
 [ext_resource type="Script" uid="uid://cup5g7mfdq4ot" path="res://scripts/hud.gd" id="1_ahhtf"]
-[ext_resource type="FontFile" uid="uid://dbwvvqww158gs" path="res://assets/fonts/alagard.ttf" id="2_oo0fn"]
+[ext_resource type="FontFile" uid="uid://dbwvvqww158gs" path="res://assets/backgrounds/alagard.ttf" id="2_oo0fn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oo0fn"]
 bg_color = Color(1, 0, 0, 1)

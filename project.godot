@@ -16,6 +16,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
 
+Main="*res://scripts/main.gd"
 GameStart="*res://globals/game_start.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 

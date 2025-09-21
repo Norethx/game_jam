@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxfow3oq4wctf"]
+
+[ext_resource type="FontFile" uid="uid://dbwvvqww158gs" path="res://assets/backgrounds/alagard.ttf" id="1_xeevv"]
+
+[node name="GameOver" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 128
+text = "The End"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Texto" type="Label" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_xeevv")
+theme_override_font_sizes/font_size = 24
+text = "You did it… you defeated their commander. But what we faced here wasn’t the full invasion — just the first strike, a test. They believe the planet is already under their control. The real army is stillw"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://kijqgxayir32"]
+[gd_scene load_steps=70 format=3 uid="uid://kijqgxayir32"]
 
 [ext_resource type="Script" uid="uid://chqsr51704i15" path="res://scripts/mecha_stone.gd" id="1_6tjip"]
 [ext_resource type="Texture2D" uid="uid://doyisc4b4pxyt" path="res://assets/sprites/Mecha-Stone/Character_sheet.png" id="1_n7tii"]
@@ -233,6 +233,22 @@ region = Rect2(0, 1300, 300, 100)
 atlas = ExtResource("3_psnii")
 region = Rect2(0, 1400, 300, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kole"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhvjl"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(100, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6dda"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(200, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3vwi"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(300, 300, 100, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_l3vwi"]
 animations = [{
 "frames": [{
@@ -309,8 +325,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pg5nf")
 }],
-"loop": true,
-"name": &"death_aparrence",
+"loop": false,
+"name": &"die",
 "speed": 5.0
 }, {
 "frames": [{
@@ -377,6 +393,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ecyps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80sro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sugdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mibku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psnii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tjip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7tii")
 }],
 "loop": false,
 "name": &"melee_attack",
@@ -445,6 +479,32 @@ animations = [{
 "loop": true,
 "name": &"raio_da_galinha",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kole")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhvjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6dda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3vwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6dda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhvjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kole")
+}],
+"loop": false,
+"name": &"take_damage",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7tii"]
@@ -462,33 +522,34 @@ scale = Vector2(2, 2)
 script = ExtResource("1_6tjip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
 sprite_frames = SubResource("SpriteFrames_l3vwi")
-animation = &"melee_attack"
-autoplay = "idle"
-frame = 6
-frame_progress = 1.0
+animation = &"take_damage"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_n7tii")
 
-[node name="Agro" type="Area2D" parent="."]
+[node name="AgroMelee" type="Area2D" parent="."]
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Agro"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgroMelee"]
 position = Vector2(-62, 17.5)
 shape = SubResource("RectangleShape2D_6tjip")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="HitboxMelee" type="Area2D" parent="."]
 scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxMelee"]
 position = Vector2(-30.5, 4)
 shape = SubResource("RectangleShape2D_psnii")
+disabled = true
 debug_color = Color(0.7, 0, 0.0116665, 0.419608)
 
-[connection signal="body_entered" from="Agro" to="." method="_on_agro_body_entered"]
-[connection signal="body_exited" from="Agro" to="." method="_on_agro_body_exited"]
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_entered" from="AgroMelee" to="." method="_on_agro_body_entered"]
+[connection signal="body_exited" from="AgroMelee" to="." method="_on_agro_body_exited"]
+[connection signal="body_entered" from="HitboxMelee" to="." method="_on_hitbox_body_entered"]

@@ -1,4 +1,14 @@
-res://scenes/mecha_stone.tscn
 res://scenes/level.tscn
-res://scenes/PlayerKnight.tscn
+res://scenes/mecha_stone.tscn
+res://scripts/mecha_stone.gd
+res://scripts/player_knight.gd
+res://scripts/penemies.gd
 res://scenes/golem_2d.tscn
+res://scripts/golem_2d.gd
+res://scenes/main.tscn
+res://scenes/main_menu.tscn
+res://scripts/main.gd
+res://addons/dialogue_manager/dialogue_responses_menu.gd
+res://scenes/maps/map.002.tscn
+res://scenes/game_over.tscn
+res://default_bus_layout.tres

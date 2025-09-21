@@ -38,7 +38,7 @@ var stamina_last_cooldown_tick: int = 0
 var stamina_total: float = 100
 enum Stamina {
 	JUMP_LOSS = 10,
-	DASH_LOSS = 25,
+	DASH_LOSS = 20,
 	HIT_LOSS = 5,
 }
 
@@ -235,9 +235,11 @@ func die():
 		sprite.play(("die_moving"))
 		await sprite.animation_finished
 		print("You are Dead")
+		get_tree().reload_current_scene()
 	else:
 		is_uncouncious = true
 		print("You are Uncouncious")
+
 
 # ===============================================
 # =================== STAMINA ===================
@@ -286,3 +288,12 @@ func _on_penemy_body_entered(body: Node2D) -> void:
 func _on_golem_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		take_health_damge(10);
+
+
+func _on_hitbox_melee_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		take_health_damge(35)
+
+
+func _on_hitbox_melee_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

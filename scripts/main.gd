@@ -1,11 +1,56 @@
 extends Node
 
+const GAME_SAVE_PATH := "user://game.save"
+const KEY_MAP_PATH := "map_path"
+const MAP_PATH_PREFIX := "res://scenes/maps"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+const GAME_SAVE_VERSION := 1
+const KEY_GAME_SAVE_VERSION := "version"
+
+var current_map_path :String
+
+func load_next_map() -> void:
+	var split_path := current_map_path.split(".")
+	var next_map_number := split_path[1].to_int() + 1
+	split_path[1] = str(next_map_number).pad_zeros(3)
+	var next_map_path = ".".join(split_path)
+	if not ResourceLoader.exists(next_map_path):
+		split_path[1] = "001"
+		next_map_path = ".".join(split_path)
+	load_map(next_map_path)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func load_map(next_map_path:String)-> void:
+	ResourceLoader.load_threaded_request(next_map_path)
+	get_tree().paused = true
+	get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(next_map_path))
+	get_tree().paused = false
+
+#
+func map_loaded(map_path: String)-> void:
+	current_map_path = map_path
+	var game_save_file := FileAccess.open(GAME_SAVE_PATH, FileAccess.WRITE)
+	game_save_file.store_var({
+		KEY_MAP_PATH: map_path,
+		KEY_GAME_SAVE_VERSION: GAME_SAVE_VERSION,
+	})
+#
+#
+func can_continue()-> bool:
+	return FileAccess.file_exists(GAME_SAVE_PATH)
+
+#
+func load_continue_map()-> void:
+	if not can_continue():
+		print("Tried to continue without save file!!")
+		return
+	var game_save_file := FileAccess.open(GAME_SAVE_PATH, FileAccess.READ)
+	var game_save_data := game_save_file.get_var() as Dictionary
+	if game_save_data[KEY_GAME_SAVE_VERSION] > GAME_SAVE_VERSION:
+		print("Tried to load unknown future save file formart!")
+		return
+	var map_path := game_save_data[KEY_MAP_PATH] as String
+	if (not map_path.begins_with(MAP_PATH_PREFIX) or map_path.contains("..")):
+		print("Invalid map path!")
+		return
+	load_map(game_save_data[KEY_MAP_PATH])

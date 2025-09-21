@@ -521,8 +521,9 @@ collision_mask = 4
 position = Vector2(19, -15.6667)
 shape = SubResource("RectangleShape2D_xcgjw")
 disabled = true
-debug_color = Color(1, 0, 0, 0.419608)
+debug_color = Color(1, 0, 0.0156863, 0.152941)
 
 [node name="AttackMovingHitbox" type="CollisionShape2D" parent="StrikeArea"]
 position = Vector2(38, -15.6667)
 shape = SubResource("RectangleShape2D_o13fa")
+debug_color = Color(0.7, 0, 0.0116665, 0.419608)
