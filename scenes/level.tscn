@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://d22ricinbil1t"]
+[gd_scene load_steps=17 format=4 uid="uid://d22ricinbil1t"]
 
 [ext_resource type="Texture2D" uid="uid://bbndbo13yq7fr" path="res://assets/tilemaps/Tiles.png" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://254typx87wf3" path="res://scenes/parallax.tscn" id="3_mx8sn"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ref06q81hxgb" path="res://assets/backgrounds/Grass_background_1.png" id="7_klq6b"]
 [ext_resource type="Texture2D" uid="uid://dwsvpxlvn6yrf" path="res://assets/backgrounds/Salt.png" id="8_b121j"]
 [ext_resource type="Texture2D" uid="uid://ow705sa3bm16" path="res://assets/backgrounds/Grass_background_2.png" id="9_8c41q"]
+[ext_resource type="PackedScene" uid="uid://kijqgxayir32" path="res://scenes/mecha_stone.tscn" id="12_8iemx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7c3h"]
 distance = -589.0
@@ -583,7 +584,7 @@ physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_w7c3h")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1rx8"]
-size = Vector2(174, 20)
+size = Vector2(371, 20)
 
 [node name="Level" type="Node2D"]
 position = Vector2(78, 0)
@@ -609,7 +610,7 @@ tile_set = SubResource("TileSet_w8frs")
 position = Vector2(847, 202)
 
 [node name="PlayerKnight" parent="." instance=ExtResource("3_w8frs")]
-position = Vector2(177, 345)
+position = Vector2(98, 348)
 
 [node name="Penemies" type="Node" parent="."]
 script = ExtResource("4_t1rx8")
@@ -630,9 +631,9 @@ initial_direction = 1
 position = Vector2(1778, 324)
 initial_direction = 1
 
-[node name="CharacterBody2D" parent="Penemies" node_paths=PackedStringArray("target") instance=ExtResource("6_t1rx8")]
+[node name="Golem2D" parent="Penemies" instance=ExtResource("6_t1rx8")]
 position = Vector2(400, 161)
-target = NodePath("../../PlayerKnight")
+collision_mask = 11
 
 [node name="HUD_bars" parent="." instance=ExtResource("5_ppgk2")]
 
@@ -808,19 +809,23 @@ collision_layer = 8
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(10, 0)
+position = Vector2(108.5, 0.000244141)
 shape = SubResource("RectangleShape2D_t1rx8")
+
+[node name="Mecha_stone" parent="." instance=ExtResource("12_8iemx")]
+position = Vector2(2493, 321)
+collision_layer = 4
+collision_mask = 2
 
 [connection signal="upate_armor" from="PlayerKnight" to="HUD_bars" method="_on_player_knight_upate_armor"]
 [connection signal="upate_health" from="PlayerKnight" to="HUD_bars" method="_on_player_knight_upate_health"]
 [connection signal="update_stamina" from="PlayerKnight" to="HUD_bars" method="_on_player_knight_update_stamina"]
 [connection signal="area_entered" from="PlayerKnight/StrikeArea" to="Penemies" method="_on_strike_area_area_entered"]
-[connection signal="body_entered" from="PlayerKnight/StrikeArea" to="Penemies" method="_on_strike_area_body_entered"]
 [connection signal="body_entered" from="Penemies/Penemy" to="PlayerKnight" method="_on_penemy_body_entered"]
 [connection signal="body_entered" from="Penemies/Penemy2" to="PlayerKnight" method="_on_penemy_body_entered"]
 [connection signal="body_entered" from="Penemies/Penemy3" to="PlayerKnight" method="_on_penemy_body_entered"]
 [connection signal="body_entered" from="Penemies/Penemy4" to="PlayerKnight" method="_on_penemy_body_entered"]
-[connection signal="body_entered" from="Penemies/CharacterBody2D" to="PlayerKnight" method="_on_character_body_2d_body_entered"]
+[connection signal="body_entered" from="Penemies/Golem2D" to="PlayerKnight" method="_on_golem_2d_body_entered"]
 
 [editable path="PlayerKnight"]
 [editable path="HUD_bars"]

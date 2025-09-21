@@ -1,5 +1,6 @@
-[gd_scene load_steps=63 format=3 uid="uid://kijqgxayir32"]
+[gd_scene load_steps=66 format=3 uid="uid://kijqgxayir32"]
 
+[ext_resource type="Script" uid="uid://chqsr51704i15" path="res://scripts/mecha_stone.gd" id="1_6tjip"]
 [ext_resource type="Texture2D" uid="uid://doyisc4b4pxyt" path="res://assets/sprites/Mecha-Stone/Character_sheet.png" id="1_n7tii"]
 [ext_resource type="Texture2D" uid="uid://dmp148mgewsl0" path="res://assets/sprites/Mecha-Stone/arm_projectile_glowing.png" id="2_6tjip"]
 [ext_resource type="Texture2D" uid="uid://b64vabgeeuh4b" path="res://assets/sprites/Mecha-Stone/Laser_sheet.png" id="3_psnii"]
@@ -132,33 +133,33 @@ region = Rect2(500, 500, 100, 100)
 atlas = ExtResource("1_n7tii")
 region = Rect2(600, 500, 100, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7tii"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(0, 400, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tjip"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(100, 400, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psnii"]
+atlas = ExtResource("1_n7tii")
+region = Rect2(200, 400, 100, 100)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_mibku"]
 atlas = ExtResource("1_n7tii")
-region = Rect2(0, 375, 100, 125)
+region = Rect2(300, 400, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sugdd"]
 atlas = ExtResource("1_n7tii")
-region = Rect2(100, 375, 100, 125)
+region = Rect2(400, 400, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_80sro"]
 atlas = ExtResource("1_n7tii")
-region = Rect2(200, 375, 100, 125)
+region = Rect2(500, 400, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecyps"]
 atlas = ExtResource("1_n7tii")
-region = Rect2(300, 375, 100, 125)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8kole"]
-atlas = ExtResource("1_n7tii")
-region = Rect2(400, 375, 100, 125)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhvjl"]
-atlas = ExtResource("1_n7tii")
-region = Rect2(500, 375, 100, 125)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t6dda"]
-atlas = ExtResource("1_n7tii")
-region = Rect2(600, 375, 100, 125)
+region = Rect2(600, 400, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0w8sk"]
 atlas = ExtResource("2_6tjip")
@@ -357,6 +358,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_n7tii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tjip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psnii")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mibku")
 }, {
 "duration": 1.0,
@@ -367,17 +377,8 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ecyps")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8kole")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lhvjl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t6dda")
 }],
-"loop": true,
+"loop": false,
 "name": &"melee_attack",
 "speed": 5.0
 }, {
@@ -446,17 +447,48 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_53gdh"]
-size = Vector2(43, 29)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7tii"]
+radius = 15.5
+height = 42.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tjip"]
+size = Vector2(124, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psnii"]
+size = Vector2(61, 82)
 
 [node name="Mecha_stone" type="CharacterBody2D"]
 scale = Vector2(2, 2)
+script = ExtResource("1_6tjip")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l3vwi")
-animation = &"idle"
-frame_progress = 0.518283
+animation = &"melee_attack"
+autoplay = "idle"
+frame = 6
+frame_progress = 1.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_53gdh")
+shape = SubResource("CapsuleShape2D_n7tii")
+
+[node name="Agro" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agro"]
+position = Vector2(-62, 17.5)
+shape = SubResource("RectangleShape2D_6tjip")
+
+[node name="Hitbox" type="Area2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(-30.5, 4)
+shape = SubResource("RectangleShape2D_psnii")
+debug_color = Color(0.7, 0, 0.0116665, 0.419608)
+
+[connection signal="body_entered" from="Agro" to="." method="_on_agro_body_entered"]
+[connection signal="body_exited" from="Agro" to="." method="_on_agro_body_exited"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

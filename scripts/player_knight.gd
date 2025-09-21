@@ -283,6 +283,6 @@ func _on_penemy_body_entered(body: Node2D) -> void:
 		take_health_damge(10);
 
 
-func _on_character_body_2d_body_entered(body: Node2D) -> void:
+func _on_golem_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		take_health_damge(10);
