@@ -10,5 +10,3 @@ ProgressBar
 CanvasLayer
 RayCast2D
 Label
-Camera2D
-Timer
