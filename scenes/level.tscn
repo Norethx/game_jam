@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://d22ricinbil1t"]
+[gd_scene load_steps=20 format=4 uid="uid://d22ricinbil1t"]
 
 [ext_resource type="Texture2D" uid="uid://bbndbo13yq7fr" path="res://assets/tilemaps/Tiles.png" id="2_w7c3h"]
 [ext_resource type="PackedScene" uid="uid://254typx87wf3" path="res://scenes/parallax.tscn" id="3_mx8sn"]
@@ -11,7 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dwsvpxlvn6yrf" path="res://assets/backgrounds/Salt.png" id="8_b121j"]
 [ext_resource type="Texture2D" uid="uid://ow705sa3bm16" path="res://assets/backgrounds/Grass_background_2.png" id="9_8c41q"]
 [ext_resource type="PackedScene" uid="uid://by2ovjg1g5ju2" path="res://scenes/platform.tscn" id="10_olg7q"]
-[ext_resource type="PackedScene" uid="uid://rtink68nnwrs" path="res://scenes/boss.tscn" id="12_8iemx"]
+[ext_resource type="AudioStream" uid="uid://bfki3wqkqs3ta" path="res://assets/music/past.mp3" id="13_64w2a"]
+[ext_resource type="PackedScene" uid="uid://kijqgxayir32" path="res://scenes/mecha_stone.tscn" id="13_fpun6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7c3h"]
 distance = -589.0
@@ -836,10 +837,18 @@ position = Vector2(0, 4.30561)
 shape = SubResource("RectangleShape2D_olg7q")
 one_way_collision = true
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("12_8iemx")]
-position = Vector2(2339, 214)
-collision_layer = 4
-collision_mask = 2
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_64w2a")
+volume_db = -2.0
+autoplay = true
+max_distance = 4096.0
+attenuation = 0.392292
+max_polyphony = 2
+parameters/looping = true
+
+[node name="Mecha_stone" parent="." instance=ExtResource("13_fpun6")]
+position = Vector2(2473, 312)
+scale = Vector2(2, 2)
 
 [connection signal="attacked_enemy" from="PlayerKnight" to="Penemies" method="_on_player_knight_attacked_enemy"]
 [connection signal="area_entered" from="PlayerKnight/StrikeArea" to="Penemies" method="_on_strike_area_area_entered"]
