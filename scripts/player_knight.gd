@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-signal attacked_enemy(enemy: Area2D)
 signal upate_health(amount: float)
 signal upate_armor(amount: float)
 signal update_stamina(amount: float)
@@ -280,5 +279,10 @@ func get_ms():
 
 
 func _on_penemy_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		take_health_damge(10);
+
+
+func _on_character_body_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		take_health_damge(10);

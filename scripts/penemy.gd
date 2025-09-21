@@ -28,8 +28,8 @@ func _ready() -> void:
 	add_to_group("penemies")
 
 func _process(delta: float) -> void:
+	# FLIPPAR O INIMIGO
 	if ray_parede.is_colliding():
-		print("COLIDIU")
 		direction *= -1
 		sprite.flip_h = !sprite.flip_h
 		if direction > 0:
@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		ray_parede.rotation += PI
 
 
-	var gravity = 500.0
+	gravity = 500.0
 	# CALCULA O MOVIMENTO HORIZONTAL
 	velocity.x = direction * speed
 

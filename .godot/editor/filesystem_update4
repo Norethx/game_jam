@@ -5,3 +5,5 @@ res://scenes/PlayerKnight.tscn
 res://scenes/golem_2d.tscn
 res://scripts/player_knight.gd
 res://scripts/penemy.gd
+res://scripts/golem_2d.gd
+res://scripts/penemies.gd

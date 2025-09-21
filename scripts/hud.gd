@@ -12,7 +12,7 @@ func _ready():
 	progress_bar_stamina.value = player_knight.stamina
 
 func _on_player_knight_upate_armor(amount: float) -> void:
-	progress_bar_armor.value = player_knight.armor
+	progress_bar_armor.value = amount
 
 func _on_player_knight_upate_health(amount: float) -> void:
 	progress_bar_health.value = amount

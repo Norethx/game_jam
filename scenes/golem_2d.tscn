@@ -290,15 +290,17 @@ _data = {
 &"spikes": SubResource("Animation_auuy6")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 10
 script = ExtResource("6_auuy6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_6a3qw")
-animation = &"spikes"
+animation = &"die"
 autoplay = "idle"
-frame = 8
+frame = 4
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
