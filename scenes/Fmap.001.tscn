@@ -937,7 +937,6 @@ position = Vector2(-335, -616)
 [node name="CanvasModulate" type="CanvasModulate" parent="CharacterBody2D"]
 visible = false
 position = Vector2(-335, -616)
-scale = Vector2(1, 1)
 color = Color(0.141176, 0.160784, 0.231373, 1)
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
