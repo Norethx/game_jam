@@ -20,17 +20,17 @@ const JUMP_VELOCITY = -400.0
 var is_attacking = false
 var is_dashing = false
 var is_damage_enabled = false
-var is_armor_enabled = false
-var is_death_enabled = false
+var is_armor_enabled = true
+var is_death_enabled = true
 var is_dead = false
 var is_uncouncious = false
 
 # STATUS
-var health: float = 100
-var armor: float = 0
+@export var health: float = 100
+@export var armor: float = 0
 var slash_damage: float = 100
 var blunt_damage: float = 20
-var stamina: float = 100
+@export var stamina: float = 100
 
 
 var stamina_cooldown: float = 0.5
@@ -57,15 +57,16 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_axis("move_left", "move_right")
 
 
-	init_animations()
-	init_hitbox(direction)
-	init_movement(direction)
-	colldown_stamina()
-	if Input.is_action_just_pressed("attack1"): attack1_handler(direction)
-	if Input.is_action_just_pressed("jump"): jump_handler()
-	if Input.is_action_just_pressed("dash"): dash_handler()
+	if not is_dead:
+		init_animations()
+		init_hitbox(direction)
+		init_movement(direction)
+		colldown_stamina()
+		if Input.is_action_just_pressed("attack1"): attack1_handler(direction)
+		if Input.is_action_just_pressed("jump"): jump_handler()
+		if Input.is_action_just_pressed("dash"): dash_handler()
 
-	move_and_slide()
+		move_and_slide()
 
 # ================================================
 # =================== GRAVITY ===================
@@ -202,7 +203,9 @@ func dash_handler():
 
 func take_health_damge(amount: float):
 	var damage: float = take_armor_damge(amount)
-	if damage:
+	if damage and not is_dead:
+		velocity.x = 0
+		sprite.play("hit")
 		if damage > health:
 			health = 0
 			upate_health.emit(health)
@@ -230,6 +233,8 @@ func take_armor_damge(amount: float) -> float:
 func die():
 	if is_death_enabled:
 		is_dead = true
+		sprite.play(("die_moving"))
+		await sprite.animation_finished
 		print("You are Dead")
 	else:
 		is_uncouncious = true

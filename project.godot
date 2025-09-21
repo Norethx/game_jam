@@ -68,6 +68,7 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/main.dialogue", 
 2d_physics/layer_1="ground_walls"
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemies"
+2d_physics/layer_4="walls_for_enemies"
 
 [rendering]
 
