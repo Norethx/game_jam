@@ -1,9 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://j0n8qmwqgp2d"]
+[gd_scene load_steps=17 format=3 uid="uid://j0n8qmwqgp2d"]
 
 [ext_resource type="Script" uid="uid://vws1ush5pmn2" path="res://scripts/fenemy.001.gd" id="1_g0yq0"]
 [ext_resource type="Texture2D" uid="uid://c7py4qbg6i344" path="res://assets/future/chicken_run_right-Sheet.png" id="1_ifkk8"]
 [ext_resource type="Texture2D" uid="uid://6y4xo2f3w1um" path="res://assets/future/chicken_run_left-Sheet.png" id="2_l2bgi"]
-[ext_resource type="Texture2D" uid="uid://ckttg7w24c3pv" path="res://assets/future/cone_gradiente.png" id="4_n4yvv"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_n4yvv"]
 animation = &"left"
@@ -44,34 +43,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("PointLight2D:position")
+tracks/1/path = NodePath("Sprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-3.55271e-15, -128)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [4.71239]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -105,30 +80,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [0, 3]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(7.62939e-06, 128)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("PointLight2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5708]
-}
 
 [sub_resource type="Animation" id="Animation_8lcnc"]
 resource_name = "left"
@@ -156,30 +107,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-128, -4.88758e-06)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("PointLight2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [3.14159]
 }
 
 [sub_resource type="Animation" id="Animation_3ckmm"]
@@ -209,30 +136,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [0, 3]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(128, -2.71051e-20)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("PointLight2D:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
 
 [sub_resource type="Animation" id="Animation_vqdu1"]
 resource_name = "up"
@@ -252,34 +155,10 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("PointLight2D:position")
+tracks/1/path = NodePath("Sprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-3.55271e-15, -128)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("PointLight2D:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [4.71239]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
@@ -310,7 +189,7 @@ animation_tree = NodePath("AnimationTree")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ifkk8")
 hframes = 4
-frame = 1
+frame = 2
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendSpace2D_ngamd")
@@ -322,14 +201,6 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_3ckmm")
 }
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-0.204147, 2.81319)
-rotation = 1.5733
-scale = Vector2(0.5, 0.5)
-shadow_enabled = true
-shadow_item_cull_mask = 3
-texture = ExtResource("4_n4yvv")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(274, 0)

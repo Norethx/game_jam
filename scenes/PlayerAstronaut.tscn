@@ -229,9 +229,6 @@ tree_root = SubResource("AnimationNodeBlendSpace2D_evhme")
 anim_player = NodePath("../AnimationPlayer")
 parameters/blend_position = Vector2(0, 0)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.5, 2.5)
-
 [node name="CoolDash" type="Timer" parent="."]
 
 [node name="Dash" type="Timer" parent="."]

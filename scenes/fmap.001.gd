@@ -9,6 +9,18 @@ extends Node2D
 @onready var communicator: Node2D = $communicator
 var	past_comunicator = false
 @onready var bool_puzz = [false,false,false,false,false]
+@onready var label: Label = $CharacterBody2D/Label
+
+func _ready() -> void:
+	change_text()
+	
+func change_text() -> void:
+	var text: String
+	if puzz_check != 4:
+		text = "Buttons: %d/4" % puzz_check
+	else:
+		text = "Run!!!"
+	label.text = text
 
 
 func _process(delta: float) -> void:
@@ -30,6 +42,7 @@ func _process(delta: float) -> void:
 		communicator.visible = false
 	if puzz_check == 4 && !past_comunicator:
 		communicator.visible = true
+	change_text()
 		
 
 func _on_puzz_1_in_reach(reached: bool) -> void:
